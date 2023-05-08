@@ -2,6 +2,7 @@ package sources_code;
 
 import static sources_code.ProdectSteps.rugDetails;
 
+import java.io.Console;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -120,8 +121,8 @@ public void saveinformationcustmer(){
 	  
 	  for(int i=0; i<mylist.size();i++) {
 		  if(mylist.get(i).id != idd) {
-		  setIssave(true);
-		  issave=issavee;
+			  this. issavee=true;
+			  setIssave(issavee);
 		  }}
 		
 	  
@@ -130,18 +131,18 @@ public void saveinformationcustmer(){
 
 	  System.out.println("\nenter name =");
 	  input2 = new Scanner(System.in);
-		String name =input2.next();
+		String n =input2.next();
 		
 		 System.out.println("\n enter phone =");
 		  input2 = new Scanner(System.in);
-		int phone =input2.nextInt();
+		int ph =input2.nextInt();
 			
 	
 			 System.out.println("\n enter address =");
 			  input2 = new Scanner(System.in);
-				String address =input2.next();
+				String ad =input2.next();
 				
-	mylist.add(new Customersteps(idd,name,phone,address));
+	mylist.add(new Customersteps(idd,n,ph,ad));
 	System.out.println("\n successfull to save information");
 	}
 		
@@ -214,6 +215,7 @@ input2 = new Scanner(System.in);
  for(int i=0;i<mylist.size();i++) {
 	 if(mylist.get(i).getid()==id1) {
 		mylist.remove(i) ;
+		i--;
         System.out.println("customer deleted successfully.");
 
 	 }
@@ -336,28 +338,28 @@ public void showshopping() {
 				
     		}}}
 	
-	 for(ProdectSteps pro :mylist.get(log.getx()).shoppingcart) {
-		   pro.print();}
+	 for(ProdectSteps pr :mylist.get(log.getx()).shoppingcart) {
+		   pr.print();}
          System.out.println("balance= ");
          System.out.println(mylist.get(log.getx()).getbalance());
         
          System.out.println("\n ");
        
          if(mylist.get(log.getx()).getbalance()>=400) {
-        	 in.setdiscount(true);
+        	 InvoiceSteps.setdiscount(true);
 	         System.out.println("balance after discount=");
 	        mylist.get(log.getx()).setbalance(mylist.get(log.getx()).getbalance()-(mylist.get(log.getx()).getbalance()*(.1)));
 	         System.out.println(mylist.get(log.getx()).getbalance());
 	         System.out.println("\n ");
 	         }
          else {
-        	 in.setdiscount(false);
+        	 InvoiceSteps.setdiscount(false);
          }
 }
 							   
 public void removeshopping() {
-	 for(ProdectSteps pro :mylist.get(log.getx()).shoppingcart) {
-		   pro.print();}
+	 for(ProdectSteps prosteps :mylist.get(log.getx()).shoppingcart) {
+		 prosteps.print();}
 
 	 if(mylist.get(log.getx()).shoppingcart.isEmpty()) {
 		 System.out.println("the arraylist is null ");}
@@ -369,7 +371,9 @@ public void removeshopping() {
 				 mylist.get(log.getx()).setbalance((mylist.get(log.getx()).getbalance())-(mylist.get(log.getx()).shoppingcart.get(j).getprice()*mylist.get(log.getx()).shoppingcart.get(j).getQuantity()));
 				 
 				 
-		  mylist.get(log.getx()).shoppingcart.remove(j);}
+		  mylist.get(log.getx()).shoppingcart.remove(j);
+		  j--;
+		  }
 	 }
 	 }
 	 
@@ -377,16 +381,16 @@ public void removeshopping() {
 public void ckeckout()	{
 	w.informationworker();
 	int f=1;
-	int count=0;
+	int counter=0;
 	System.out.println(log.getx());
 if(mylist.get(log.getx()).shoppingcart .isEmpty() ) {
-	 in.setisgenerate(false);
+	 InvoiceSteps.setisgenerate(false);
 		System.out.println("shopping cart is null");
 		f=0;
 	}
 	if(f==1) {
 		
-		in.setisgenerate(true);
+		InvoiceSteps.setisgenerate(true);
 		System.out.println("\n -----------------------------------------------------");
 	    System.out.println("                -------Receipt ---------        ");
 	System.out.println(" Address : "+mylist.get(log.getx()).getaddress());
@@ -394,14 +398,15 @@ if(mylist.get(log.getx()).shoppingcart .isEmpty() ) {
 
 	for(ProdectSteps pro :mylist.get(log.getx()).shoppingcart) {
 		   pro.print();
-		   count++;}
+		   counter++;
+		   }
 	  System.out.println("Total balance="+mylist.get(log.getx()).getbalance());
 	  System.out.println("  -----------------------------------------------------");
 
-		if(count>=1||count<=5) {
+		if(counter>=1||counter<=5) {
 			System.out.println("Delivery = from 1 to 5 days");
 		}
-		else if(count>=6||count<=15) {
+		else if(counter>=6||counter<=15) {
 			System.out.println("Delivery = from 5 to 10 days");
 		}
 		
@@ -512,8 +517,8 @@ public void report() {
  
 }
 public void showorderw() {
-	for(Order o:w.workerlist.get(log.getx()).l) {
-		o.printorder();
+	for(Order shorder:w.workerlist.get(log.getx()).l) {
+		shorder.printorder();
 	}
 }
 
@@ -550,6 +555,13 @@ case 3:{
 	w.workerlist.get(log.getx()).l.clear();
 	break;
 }
+default :
+{
+	Console console = System.console();
+	if (console != null) {
+	    console.writer().print("Not found");
+	}
+}
 }
 
 
@@ -561,10 +573,11 @@ public void sendnotification() {
 	}
 }
 public void sendmessage() {
-	if(Worker.isIswaiting()==true) {
+	if (Worker.isIswaiting())
+	{
 		System.out.println("the order is waiting");
 	}
-	else if(Worker.isIntretmant()==true) {
+	else if(Worker.isIntretmant()) {
 		System.out.println("the order in treatment");
 
 	}
