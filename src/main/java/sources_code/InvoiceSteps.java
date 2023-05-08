@@ -4,7 +4,7 @@ package sources_code;
 
 public class InvoiceSteps {
 	public static final boolean INVOICE = false;
-	public static boolean isdiscount;
+	public static final boolean isdiscount = false;
 
 	Customersteps o=new Customersteps();
 	static LoginSteps  log= new LoginSteps();
@@ -24,7 +24,7 @@ public class InvoiceSteps {
 	}
 	
 	public void setdiscount(boolean isdiscount) {
-		InvoiceSteps.isdiscount=isdiscount;
+	    throw new UnsupportedOperationException("Cannot modify final field isdiscount.");
 	}
 }
 
