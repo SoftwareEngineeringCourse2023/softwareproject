@@ -6,7 +6,7 @@ public class ReportsSteps {
 	
 private static boolean isreport;
 
-public ReportsSteps() {
+private ReportsSteps() {
 	
 	Console console = System.console();
 	if (console != null) {

@@ -15,7 +15,7 @@ public class InvoiceSteps {
 		return invoice;
 	}
 	
-	public void setisgenerate(boolean invoice) {
+	public static void setisgenerate(boolean invoice) {
 		InvoiceSteps.invoice=invoice;
 	}
 	
@@ -23,7 +23,7 @@ public class InvoiceSteps {
 		return isdiscount;
 	}
 	
-	public void setdiscount(boolean isdiscount) {
+	public static void setdiscount(boolean isdiscount) {
 		InvoiceSteps.isdiscount=isdiscount;
 	}
 }
