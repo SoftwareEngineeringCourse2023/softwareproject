@@ -408,7 +408,7 @@ if(mylist.get(log.getx()).shoppingCart .isEmpty() ) {
 				 order.add(new Order(log.getx() ,mylist.get(log.getx()).shoppingCart.get(j).getCategory(),mylist.get(log.getx()).shoppingCart.get(j).getid(),mylist.get(log.getx()).shoppingCart.get(j).getName(),mylist.get(log.getx()).shoppingCart.get(j).getPicture(),mylist.get(log.getx()).shoppingCart.get(j).getDescriptions(),
 						 mylist.get(log.getx()).shoppingCart.get(j).getprice(),mylist.get(log.getx()).shoppingCart.get(j).getMaterial(),mylist.get(log.getx()).shoppingCart.get(j).getCleaning(),mylist.get(log.getx()).shoppingCart.get(j).getQuantity()));
 				 writefile(); 
-				w.workerlist.get(log.getx()).list.add(new Order(log.getx() ,mylist.get(log.getx()).shoppingCart.get(j).getCategory(),mylist.get(log.getx()).shoppingCart.get(j).getid(),mylist.get(log.getx()).shoppingCart.get(j).getName(),mylist.get(log.getx()).shoppingCart.get(j).getPicture(),mylist.get(log.getx()).shoppingCart.get(j).getDescriptions(),
+				w.workerlist.get(log.getx()).l.add(new Order(log.getx() ,mylist.get(log.getx()).shoppingCart.get(j).getCategory(),mylist.get(log.getx()).shoppingCart.get(j).getid(),mylist.get(log.getx()).shoppingCart.get(j).getName(),mylist.get(log.getx()).shoppingCart.get(j).getPicture(),mylist.get(log.getx()).shoppingCart.get(j).getDescriptions(),
 						 mylist.get(log.getx()).shoppingCart.get(j).getprice(),mylist.get(log.getx()).shoppingCart.get(j).getMaterial(),mylist.get(log.getx()).shoppingCart.get(j).getCleaning(),mylist.get(log.getx()).shoppingCart.get(j).getQuantity()));
 			
 				 }
@@ -504,13 +504,13 @@ public void report() {
  
 }
 public void showorderw() {
-	for(Order o:w.workerlist.get(log.getx()).list) {
+	for(Order o:w.workerlist.get(log.getx()).l) {
 		o.printorder();
 	}
 }
 
 public void available() {
-	if(w.workerlist.get(log.getx()).list.isEmpty()) {
+	if(w.workerlist.get(log.getx()).l.isEmpty()) {
 		Worker.setAvailable(true);
 	}
 	else {
@@ -539,7 +539,7 @@ case 3:{
 	Worker.setIntretmant(false);
 	Worker.setIscompleted(true);
 	Worker.setNotification(true);
-	w.workerlist.get(log.getx()).list.clear();
+	w.workerlist.get(log.getx()).l.clear();
 	break;
 }
 }

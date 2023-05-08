@@ -3,8 +3,8 @@ package sources_code;
 
 
 public class InvoiceSteps {
-	private static  boolean INVOICE = false;
-	private static  boolean ISDISCOUNT = false;
+	private static  boolean invoice = false;
+	private static  boolean isdiscount = false;
 
 	Customersteps o=new Customersteps();
 	static LoginSteps  log= new LoginSteps();
@@ -12,19 +12,19 @@ public class InvoiceSteps {
 	
 	
 	public boolean isgenerate() {
-		return INVOICE;
+		return invoice;
 	}
 	
 	public void setisgenerate(boolean invoice) {
-		InvoiceSteps.INVOICE=invoice;
+		InvoiceSteps.invoice=invoice;
 	}
 	
 	public boolean getdiscount() {
-		return ISDISCOUNT;
+		return isdiscount;
 	}
 	
 	public void setdiscount(boolean isdiscount) {
-	    throw new UnsupportedOperationException("Cannot modify final field isdiscount.");
+		InvoiceSteps.isdiscount=isdiscount;
 	}
 }
 

@@ -193,7 +193,7 @@ public class mainapplication {
 			
 			case 3:{
 				for(Worker w:W.workerlist) {
-				w.show_worker();}
+				w.showWorker();}
 				break;
 			}
 			case 4:{
