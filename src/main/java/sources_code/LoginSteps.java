@@ -15,8 +15,8 @@ public class LoginSteps {
 	 String password;
 	 String username;
 	
-	private static boolean isLoginadmin =false;
-	private static  boolean isLogincustomer =false;
+	private   static boolean isLoginadmin =false;
+	private  static  boolean isLogincustomer =false;
 	private static boolean isLoginworker =false;
 	private static boolean isLoginonuser =false;
 	private static boolean f0 =false;

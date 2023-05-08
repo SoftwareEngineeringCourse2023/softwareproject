@@ -151,7 +151,6 @@ public class reports {
 		
 		
 	
-	@SuppressWarnings("unlikely-arg-type")
 	@Then("successfull to  generate customized reports about business")
 	public void successfull_to_generate_customized_reports_about_business() {
 		equals (ReportsSteps.isIsreport()==true);
