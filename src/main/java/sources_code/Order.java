@@ -1,11 +1,17 @@
 package sources_code;
 
+import java.io.Console;
 import java.util.ArrayList;
+import java.util.List;
+
+import java.util.logging.Logger;
 
 public class Order {
 	
-	Customersteps C=new Customersteps();
-	 private String Category;
+    private static final Logger LOGGER = Logger.getLogger(Order.class.getName());
+
+	Customersteps c =new Customersteps();
+	 private String category;
 	private int id;
 	private String name;
 	private String picture;
@@ -14,11 +20,11 @@ public class Order {
 	private String material;
 	private String cleaninig;
 	private int quantity;
-	private int ID;
+	private int identifier;
 	public Order(){}
-		public Order(int ID,String Category,int id,String name, String picture, String description, double price, String material, String cleaninig,int quantity) {
-	    	this.setID(ID);
-			this.setCategory(Category);
+		public Order(int identifier,String category,int id,String name, String picture, String description, double price, String material, String cleaninig,int quantity) {
+	    	this.setidentifier(identifier);
+			this.setCategory(category);
 	    	this.setId(id);
 	    	this.setName(name);
 	    	this.setPicture(picture);
@@ -29,12 +35,12 @@ public class Order {
 	    	this.setQuantity((quantity));
 	    	
 		}
-		public ArrayList<Order> order=new ArrayList<Order>();
+		public final List<Order> or=new ArrayList<Order>();
 		public String getCategory() {
-			return Category;
+			return category;
 		}
 		public void setCategory(String category) {
-			Category = category;
+			this.category = category;
 		}
 		public int getId() {
 			return id;
@@ -66,11 +72,15 @@ public class Order {
 		public void setPrice(double price) {
 			this.price = price;
 		}
-		public int getID() {
-			return ID;
+		public int getidentifier() {
+			return identifier;
 		}
-		public void setID(int iD) {
-			ID = iD;
+		public void setidentifier(int iD) {
+			identifier = iD;
+		}
+		public int printidentifier() {
+			LOGGER.info(String.format("ID: %s ", identifier));
+			return identifier;
 		}
 		public int getQuantity() {
 			return quantity;
@@ -90,22 +100,68 @@ public class Order {
 		public void setMaterial(String material) {
 			this.material = material;
 		}
+		
+		public String printcat() {
+			LOGGER.info(String.format("Category product: %s " , category ));
+			return category;
+		}
+		
+		public int printid() {
+			LOGGER.info(String.format("Id  product: %s  ",getId() ));
+			return id;
+		}
+		
+		public String printname() {
+			LOGGER.info(String.format("Name product: %s",name));
+			return name;
+		}
+		
+		public String printpic() {
+			LOGGER.info(String.format("Link for Picture product: %s ",picture));
+			return picture;
+		}
+		public String printdisc() {
+			LOGGER.info(String.format("The discription : %s ",description));
+			return description;
+		}
+		
+		public double printprice() {
+			LOGGER.info(String.format("The price :  ",price));
+			return price;
+		}
+		
+		public String printmt() {
+			LOGGER.info(String.format("The Material: %s ",material));
+			return material;
+		}
+		
+		public String printcln() {
+			LOGGER.info(String.format("The type cleaning : %s ",cleaninig));
+			return cleaninig;
+		}
+		
+		public int printquan() {
+			LOGGER.info(String.format("The Quantity : ",quantity));
+		
+
+			return quantity;
+		}
+		
+		
+		
 		public void printorder() {
-			 System.out.printf("ID: "  );
-			 System.out.print( ID );
-			 System.out.printf(" || Category product: %s || " , Category );
-			 System.out.printf("Id  product: %s || ",getId());
-			 System.out.printf("Name product: %s || ",name); 
-			 System.out.printf("Link for Picture product: %s || ",picture);
-			 System.out.printf("The discription : %s || ",description);
-			 System.out.print("The price :  ");
-			 System.out.print(price);
-			 System.out.printf(" || The Material: %s  || ",material);
-			 System.out.printf("The type cleaning : %s || .",cleaninig);
-			 System.out.printf("The Quantity : ");
-			 System.out.print(quantity);
+			 printidentifier();
+			 printcat();
+			 printid();
+			 printname();
+			 printpic();
+			 printdisc();
+			 printprice();
+			 printmt();
+			 printcln();
+			 printquan();
 			
-			 System.out.print("\n" );
+			 LOGGER.info("\n" );
 
 		}
 		

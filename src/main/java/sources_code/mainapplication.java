@@ -60,7 +60,7 @@ public class mainapplication {
 	public static void admin() {
 		
 		
-		//int x=LoginSteps.x;
+		
         int flge1=1;
 		input = new Scanner(System.in);
 

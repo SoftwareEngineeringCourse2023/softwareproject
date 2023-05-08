@@ -585,7 +585,7 @@ private void writefile()
     PrintWriter write = new PrintWriter(writef);
     for(int i=0;i<mylist.get(log.getx()).order.size();i++)
     {
-    	String tostring=(order.get(i).getID()+order.get(i).getCategory()+order.get(i).getId()+order.get(i).getName()+order.get(i).getPicture()+order.get(i).getDescription()+order.get(i).getPrice()+order.get(i).getMaterial()+order.get(i).getCleaninig()+order.get(i).getQuantity());
+    	String tostring=(order.get(i).getidentifier()+order.get(i).getCategory()+order.get(i).getId()+order.get(i).getName()+order.get(i).getPicture()+order.get(i).getDescription()+order.get(i).getPrice()+order.get(i).getMaterial()+order.get(i).getCleaninig()+order.get(i).getQuantity());
     
         write.print(tostring);
     }
