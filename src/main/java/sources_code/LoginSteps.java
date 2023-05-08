@@ -1,5 +1,6 @@
 package sources_code;
 
+import java.io.Console;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -101,11 +102,12 @@ public class LoginSteps {
      
      
      public  void  addnewlogin() {
-    	//boolean e= cus.getissave();
-    	//System.out.print(e);1274
+    	
     	if(Customersteps.issave) {
-    	 System.out.println("Enter Username : ");
- 		input3 = new Scanner(System.in);
+    		Console console = System.console();
+    		if (console != null) {
+    		    console.writer().print("Enter Username: ");
+    		} 		input3 = new Scanner(System.in);
  		String username=input3.nextLine();
  		
  		System.out.println("Enter password : ");
