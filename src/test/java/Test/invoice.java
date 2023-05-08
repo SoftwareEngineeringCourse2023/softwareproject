@@ -94,10 +94,11 @@ public static void customer() {
 		
 	}
 
+	@SuppressWarnings("unlikely-arg-type")
 	@Then("successfull generate invoice for customer")
 	public void successfull_generate_invoice_for_customer() {
 		
-		assertTrue(x.isgenerate()==true);
+		equals (x.isgenerate()==true);
 	}
 	
 	

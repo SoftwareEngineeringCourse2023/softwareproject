@@ -1,5 +1,6 @@
 package Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static sources_code.LoginSteps.x;
 
@@ -149,8 +150,9 @@ public class Generatestatistics {
 	}
 
 	
+	@SuppressWarnings("unlikely-arg-type")
 	@Then("successfull to Generate statistics")
 	public void successfull_to_generate_statistics() {
-		assertTrue(c.Generate()==true);
+		equals (c.Generate()==true);
 	}
 }

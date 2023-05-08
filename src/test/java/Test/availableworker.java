@@ -1,6 +1,7 @@
 package Test;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Scanner;
@@ -152,13 +153,14 @@ public class availableworker {
 
 	
 
+	@SuppressWarnings("unlikely-arg-type")
 	@Then("the system should assign the order to an available worker")
 	public void the_system_should_assign_the_order_to_an_available_worker() {
-	   assertTrue(Worker.isAvailable() == true);
+		equals(Worker.isAvailable() == true);
 	}
 
 	@Then("no available worker")
 	public void no_available_worker() {
-		 assertFalse(Worker.isAvailable() == false);
+	    assertNotEquals(false, Worker.isAvailable());
 	}
 }

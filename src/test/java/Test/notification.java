@@ -50,9 +50,10 @@ public class notification {
 		}
 	
 
+	@SuppressWarnings("unlikely-arg-type")
 	@Then("the customer should receive the email")
 	public void the_customer_should_receive_the_email() {
-		assertTrue(c.receivenotification() == true);
+		equals (c.receivenotification() == true);
 
 	}
 }

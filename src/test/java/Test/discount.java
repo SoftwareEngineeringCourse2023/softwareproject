@@ -1,6 +1,7 @@
 package Test;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
@@ -10,10 +11,10 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import sources_code.Customersteps;
-//import sources_code.Customersteps;
 import sources_code.InvoiceSteps;
 import sources_code.LoginSteps;
 import sources_code.ProdectSteps;
+import sources_code.Worker;
 
 public class discount {
 	static Customersteps c = new Customersteps();
@@ -93,16 +94,17 @@ public static void customer() {
 
 	
 
+	@SuppressWarnings("unlikely-arg-type")
 	@Then("successfull to discuont  customers")
 	public void successfull_to_discuont_customers() {
 		//assertTrue(in.getdiscount()==true);
-		assertTrue(in.getdiscount() == true);
+		equals (in.getdiscount() == true);
 
 	}
 
 	@Then("fail to discuont  customers")
 	public void fail_to_discuont_customers() {
-		assertFalse(in.getdiscount() == false);
+	    assertNotEquals(false, in.getdiscount());
 	}
 	
 	

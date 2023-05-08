@@ -6,13 +6,18 @@ import java.util.Scanner;
 
 public class LoginSteps {
 
-	public LoginSteps() {};
+	public LoginSteps() {
+		Console console = System.console();
+		if (console != null) {
+		    console.writer().print("");
+		} 
+	};
 	 String password;
 	 String username;
 	
-	private   static boolean isLoginadmin =false;
-	private  static  boolean isLogincustomer =false;
-	private   static boolean isLoginworker =false;
+	private static boolean isLoginadmin =false;
+	private static  boolean isLogincustomer =false;
+	private static boolean isLoginworker =false;
 	private static boolean isLoginonuser =false;
 	private static boolean f0 =false;
 	private static boolean f1 =false;
@@ -107,7 +112,8 @@ public class LoginSteps {
     		Console console = System.console();
     		if (console != null) {
     		    console.writer().print("Enter Username: ");
-    		} 		input3 = new Scanner(System.in);
+    		} 
+    		input3 = new Scanner(System.in);
  		String username=input3.nextLine();
  		
  		System.out.println("Enter password : ");

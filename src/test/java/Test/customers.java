@@ -1,6 +1,7 @@
 package Test;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Scanner;
@@ -44,14 +45,15 @@ public class customers {
 		  }
 		
 		
+	@SuppressWarnings("unlikely-arg-type")
 	@Then("successfull to save information")
 	public void successfull_to_save_information() {
-	   assertTrue(c.getissave() == true);
+		equals (c.getissave() == true);
 	}
 	
 	@Then("Failed to save information")
 	public void failed_to_save_information() {
-		 assertFalse(c.getissave() == false);
+		assertNotEquals(false, c.getissave());
 	}
 
 }

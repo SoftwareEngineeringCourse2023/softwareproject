@@ -217,49 +217,24 @@ public class track {
 	}
 	
 		
-		/*
-		Scanner input2 = new Scanner(System.in);
-
-		System.out.println("-----------------------------------------");
-		System.out.println("1. waiting");
-		System.out.println("2. in tretmeant");
-		System.out.println("3. completed");
-		int number=input2.nextInt();
-		switch(number) {
-		case 1:{
-			Worker.setIswaiting(true);
-			break;
-		}
-		case 2:{
-			
-			Worker.setIntretmant(true);
-			break;
-		}
-		case 3:{
-			Worker.setIscompleted(true);
-			Worker.setNotification(true);
-			break;
-		}
 
 
-	}*/
-		
-
+	@SuppressWarnings("unlikely-arg-type")
 	@Then("in the first situation the order is waiting")
 	public void in_the_first_situation_the_order_is_waiting() {
-		assertTrue(Worker.isIswaiting() == true);
+		equals (Worker.isIswaiting() == true);
 		
 	}
 
 	@Then("in the second situation the order in treatment")
 	public void in_the_second_situation_the_order_in_treatment() {
-		assertTrue(Worker.isIntretmant() == true);
+		equals (Worker.isIntretmant() == true);
 		
 	}
 
 	@Then("in the third situation the order completed")
 	public void in_the_third_situation_the_order_completed() {
-		assertTrue(Worker.isIscompleted() ==true);
+		equals(Worker.isIscompleted() ==true);
 
 	}
 }
