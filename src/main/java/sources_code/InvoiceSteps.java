@@ -4,7 +4,7 @@ package sources_code;
 
 public class InvoiceSteps {
 	public static final boolean INVOICE = false;
-	public static final boolean isdiscount = false;
+	public static final boolean ISDISCOUNT = false;
 
 	Customersteps o=new Customersteps();
 	static LoginSteps  log= new LoginSteps();
@@ -20,7 +20,7 @@ public class InvoiceSteps {
 	}
 	
 	public boolean getdiscount() {
-		return isdiscount;
+		return ISDISCOUNT;
 	}
 	
 	public void setdiscount(boolean isdiscount) {
