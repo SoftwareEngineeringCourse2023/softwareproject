@@ -104,7 +104,7 @@ public class mainapplication {
 	    			
                    case 2:{
 	    				
-	    				pro.Add_product();
+	    				pro.addproduct();
 	    				
 	    				break;
 	    			}
@@ -185,11 +185,11 @@ public class mainapplication {
 	    	     }		
  	    			
  	    			
- 	    			}//number
- 				}//while loop
+ 	    			}
+ 				}
  				
  			break;	
-			}//case2
+			}
 			
 			case 3:{
 				for(Worker w:W.workerlist) {

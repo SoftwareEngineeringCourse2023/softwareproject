@@ -40,8 +40,6 @@ public class ProdectSteps {
 
 		public void coverpage() {
 			System.out.println("Welcome to the cover page!\n");
-        // System.out.println("Please full the information about your product ");
-
 			coverdetails();
 		 	
 		    
@@ -50,8 +48,8 @@ public class ProdectSteps {
 		public String getCategory() {
 			return category;	
 		}
-		public void setCategory(String Category) {
-			this.category = Category;		
+		public void setCategory(String Cat) {
+			this.category = Cat;		
 		}
 		
 		public int getid() {
@@ -111,7 +109,7 @@ public class ProdectSteps {
 		public void init() {
 			rugDetails.add(new ProdectSteps("carpet",1, "Kitchen cleaning","www.kitchenimg.com","carpet sizes: 123*75",420,"Triexta Carpeting","Kitchen cleaning",1));
 			rugDetails.add(new ProdectSteps("carpet",2, "Bathroom cleaning","www.bathimg.com", "carpet sizes: 20*75",100,"Acrylic Carpeting","Bathroom cleaning",1));
-			rugDetails.add(new ProdectSteps("carpet",3, "Livingroom cleaning","www.livingimg.com", "carpet sizes: 200*100",345,"Polyster Carpeting","Living room cleaning",1));
+			rugDetails.add(new ProdectSteps("cover",3, "Livingroom cleaning","www.livingimg.com", "carpet sizes: 200*100",345,"Polyster Carpeting","Living room cleaning",1));
 			rugDetails.add(new ProdectSteps("cover",4, "Bedrooms covers cleaning","www.bedroomimg.com", "carpet sizes: 100*100",150,"Cotton","Bedroom cleaning",1));
 
 				}
@@ -167,7 +165,7 @@ public class ProdectSteps {
 				 
 		}
 
-		public void create_product() {
+		public void createproduct() {
 			
 			
 			System.out.println("enter Category product=");
@@ -210,7 +208,7 @@ public class ProdectSteps {
 			 
 		}
 		
-		public void Add_product() {
+		public void addproduct() {
 			 input0 = new Scanner(System.in);
 			 System.out.println("Enter product Category: ");
 		        String Category  =  input0.next();
@@ -218,7 +216,7 @@ public class ProdectSteps {
 		        
 		        System.out.println("Enter the id product=");
 		        input0 = new Scanner(System.in);
-				 int id =  input0.nextInt();
+				 int idproduct =  input0.nextInt();
 				 
 				 for (ProdectSteps product : rugDetails) {
 			            if (product.getid() == id) {
@@ -229,13 +227,13 @@ public class ProdectSteps {
 			            }
 			            
 			            
-			                Add_product();
+			                addproduct();
 			            }
 			        }
 				 
 		        System.out.println("enter name product=");
 		        input0 = new Scanner(System.in);
-				 String name =  input0.next();
+				 String namepro =  input0.next();
 				
 				 System.out.println("enter picture product=");
 				 input0 = new Scanner(System.in);
@@ -256,7 +254,7 @@ public class ProdectSteps {
 				System.out.println("enter cleanning product=");
 				 input0 = new Scanner(System.in);
 				 String c=  input0.next();
-				 rugDetails.add(new ProdectSteps (Category,id,name,pe,dis,price,m,c,1));
+				 rugDetails.add(new ProdectSteps (Category,idproduct,namepro,pe,dis,price,m,c,1));
 				 
 		        System.out.println("Product added successfully.");
 		    }
@@ -293,7 +291,7 @@ public class ProdectSteps {
 						
 						 System.out.println("Enter price product=");
 						 input0 = new Scanner(System.in);
-						double price = input0.nextDouble();
+						double priceproduct = input0.nextDouble();
 						
 						 System.out.println("Enter material product=");
 						 input0 = new Scanner(System.in);
@@ -305,7 +303,7 @@ public class ProdectSteps {
 						
 			    		  
 
-		    	    	rugDetails.get(i).changeprodect(dis,price,m,c);
+		    	    	rugDetails.get(i).changeprodect(dis,priceproduct,m,c);
 		               
 		                System.out.println("Product updated successfully.");
 		               
