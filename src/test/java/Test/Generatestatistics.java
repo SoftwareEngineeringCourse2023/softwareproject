@@ -65,7 +65,6 @@ public class Generatestatistics {
 
         while(flge1==1) {
         	System.out.println("| **************Menu***************|\n ");
-			//System.out.println("| 4. Reports about business        |\n");
 			System.out.println("| 1. Generate statistics           |\n");
 			
 
