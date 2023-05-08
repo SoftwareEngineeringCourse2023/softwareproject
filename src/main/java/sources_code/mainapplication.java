@@ -160,13 +160,13 @@ public class mainapplication {
  	    			switch(number1) {
  	    			case 1:{
  	    				for(int i=0;i<cus.mylist.size();i++) {
- 	    					cus.mylist.get(i).show_customer();
+ 	    					cus.mylist.get(i).showcustomer();
  	    				}
  	    				
  	    				break;
  	    			}
  	    			case 2:{
- 	    				cus.saveinformation_custmer();
+ 	    				cus.saveinformationcustmer();
  	    				log.addnewlogin();
  	    			
  	    				break;

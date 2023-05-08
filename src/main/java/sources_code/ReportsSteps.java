@@ -14,6 +14,7 @@ public ReportsSteps() {
 	}
 }
 
+
 public static boolean isIsreport() {
 	return isreport;
 }

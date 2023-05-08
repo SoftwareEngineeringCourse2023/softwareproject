@@ -33,7 +33,7 @@ public class reports {
 		int x=LoginSteps.x;
 		System.out.println(x);
            l.setx(x);
-		System.out.println(c.mylist.get(x).getaddress());
+		System.out.println(Customersteps.mylist.get(x).getaddress());
 		
 		 
 		if(l.getisLoginadmin()==true){

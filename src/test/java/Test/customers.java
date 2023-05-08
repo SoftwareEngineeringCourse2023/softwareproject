@@ -39,21 +39,21 @@ public class customers {
 				  input2 = new Scanner(System.in);
 					String address =input2.next();
 					
-		c.mylist.add(new Customersteps(idd,name,phone,address));
+		Customersteps.mylist.add(new Customersteps(idd,name,phone,address));
 		System.out.println("\n successfull to save information");
-		c.setissave(true);
+		Customersteps.setIssave(true);
 		  }
 		
 		
 	@SuppressWarnings("unlikely-arg-type")
 	@Then("successfull to save information")
 	public void successfull_to_save_information() {
-		equals (c.getissave() == true);
+		equals (Customersteps.isIssave() == true);
 	}
 	
 	@Then("Failed to save information")
 	public void failed_to_save_information() {
-		assertNotEquals(false, c.getissave());
+		assertNotEquals(false, Customersteps.isIssave());
 	}
 
 }

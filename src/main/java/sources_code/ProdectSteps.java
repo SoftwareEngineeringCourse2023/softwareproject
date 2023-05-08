@@ -1,11 +1,9 @@
 package sources_code;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
-import io.cucumber.messages.types.DataTable;
 
 public class ProdectSteps {
-	 private  String Category;
+	 private  String category;
 	    private int id;
 		private  String name;
 		private  String picture;
@@ -15,8 +13,8 @@ public class ProdectSteps {
 	    private  String cleaninig;
 	    private  int quantity;
 	    
-	    ProdectSteps(String Category,int id,String name, String picture, String description, double price, String material, String cleaninig,int quantity) {
-	    	this.Category = Category;
+	    ProdectSteps(String category,int id,String name, String picture, String description, double price, String material, String cleaninig,int quantity) {
+	    	this.category = category;
 	    	this.id = id;
 	    	this.name = name;
 	    	this.picture = picture;
@@ -50,10 +48,10 @@ public class ProdectSteps {
 		}
 		
 		public String getCategory() {
-			return Category;	
+			return category;	
 		}
 		public void setCategory(String Category) {
-			this.Category = Category;		
+			this.category = Category;		
 		}
 		
 		public int getid() {
@@ -148,7 +146,7 @@ public class ProdectSteps {
 		public void print() {
 			
 			if(!rugDetails.isEmpty()) {
-				 System.out.printf("Category product: %s || " , Category );
+				 System.out.printf("Category product: %s || " , category );
 				 System.out.printf("Id  product: %s || ",getid());
 				 System.out.printf("Name product: %s || ",name); 
 				 System.out.printf("Link for Picture product: %s || ",picture);

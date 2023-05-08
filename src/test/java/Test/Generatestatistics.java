@@ -36,7 +36,7 @@ public class Generatestatistics {
 		int x=LoginSteps.x;
 		System.out.println(x);
            l.setx(x);
-		System.out.println(c.mylist.get(x).getaddress());
+		System.out.println(Customersteps.mylist.get(x).getaddress());
 		
 		 
 		if(l.getisLoginadmin()==true){
@@ -153,6 +153,6 @@ public class Generatestatistics {
 	@SuppressWarnings("unlikely-arg-type")
 	@Then("successfull to Generate statistics")
 	public void successfull_to_generate_statistics() {
-		equals (c.Generate()==true);
+		equals(c.grer()==true);
 	}
 }

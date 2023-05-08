@@ -108,7 +108,7 @@ public class LoginSteps {
      
      public  void  addnewlogin() {
     	
-    	if(Customersteps.issave) {
+    	if(Customersteps.isIssave()) {
     		Console console = System.console();
     		if (console != null) {
     		    console.writer().print("Enter Username: ");
