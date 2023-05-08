@@ -48,8 +48,8 @@ public class ProdectSteps {
 		public String getCategory() {
 			return category;	
 		}
-		public void setCategory(String Cat) {
-			this.category = Cat;		
+		public void setCategory(String Catproduct) {
+			this.category = Catproduct;		
 		}
 		
 		public int getid() {
@@ -170,15 +170,15 @@ public class ProdectSteps {
 			
 			System.out.println("enter Category product=");
 			 input0 = new Scanner(System.in);
-			 String Category = input0.next();
+			 String Catepro = input0.next();
 			 
 			 System.out.println("enter the id product=");
 			 input0 = new Scanner(System.in);
-			 int id =  input0.nextInt();
+			 int idpro =  input0.nextInt();
 			 
 			System.out.println("enter name product=");
 			 input0 = new Scanner(System.in);
-			 String name =  input0.next();
+			 String nameproduct =  input0.next();
 			
 			 System.out.println("enter picture product=");
 			 input0 = new Scanner(System.in);
@@ -199,7 +199,7 @@ public class ProdectSteps {
 			System.out.println("enter cleanning product=");
 			 input0 = new Scanner(System.in);
 			 String c=  input0.next();
-			 rugDetails.add(new ProdectSteps (Category,id,name,pe,dis,price,m,c,1));
+			 rugDetails.add(new ProdectSteps (Catepro,idpro,nameproduct,pe,dis,price,m,c,1));
 			 
 			
 			  
@@ -211,7 +211,7 @@ public class ProdectSteps {
 		public void addproduct() {
 			 input0 = new Scanner(System.in);
 			 System.out.println("Enter product Category: ");
-		        String Category  =  input0.next();
+		        String ctg  =  input0.next();
 		       
 		        
 		        System.out.println("Enter the id product=");
@@ -245,7 +245,7 @@ public class ProdectSteps {
 				
 				 System.out.println("enter price product=");
 				 input0 = new Scanner(System.in);
-				double price =  input0.nextDouble();
+				double priceprdct =  input0.nextDouble();
 				
 				 System.out.println("enter material product=");
 				 input0 = new Scanner(System.in);
@@ -254,7 +254,7 @@ public class ProdectSteps {
 				System.out.println("enter cleanning product=");
 				 input0 = new Scanner(System.in);
 				 String c=  input0.next();
-				 rugDetails.add(new ProdectSteps (Category,idproduct,namepro,pe,dis,price,m,c,1));
+				 rugDetails.add(new ProdectSteps (ctg,idproduct,namepro,pe,dis,priceprdct,m,c,1));
 				 
 		        System.out.println("Product added successfully.");
 		    }
@@ -263,9 +263,9 @@ public class ProdectSteps {
 		    	
 			 input0 = new Scanner(System.in);
 				 System.out.println("Enter product ID: ");
-			        int id  =  input0.nextInt();
+			        int entid  =  input0.nextInt();
 			        for (int i=0;i<rugDetails.size();i++) {
-			            if (rugDetails.get(i).getid() == id) {
+			            if (rugDetails.get(i).getid() == entid) {
 			            	rugDetails.remove(i);
 				                System.out.println("Product deleted successfully.");
 				                
@@ -279,9 +279,9 @@ public class ProdectSteps {
 				int f=0;
 				 input0 = new Scanner(System.in);
 		        System.out.println("Enter product ID: ");
-		       int id  =  input0.nextInt();
+		       int idmas  =  input0.nextInt();
 		       for (int i=0;i<rugDetails.size();i++) {
-		            if (rugDetails.get(i).getid() == id) {
+		            if (rugDetails.get(i).getid() == idmas) {
 		            	f=1;
 		      
 						 
@@ -324,10 +324,10 @@ public class ProdectSteps {
 		  public void  findproductbyname() {
 			  input0= new Scanner(System.in);
 		        System.out.println("Enter product name: ");
-		        String name  =  input0.next();
+		        String namenanc  =  input0.next();
 		        ArrayList<ProdectSteps> findByName = new ArrayList<ProdectSteps>();
 		        for (ProdectSteps product : rugDetails) {
-		        	if(product.getName().equalsIgnoreCase(name)) {
+		        	if(product.getName().equalsIgnoreCase(namenanc)) {
 		        		findByName.add(product);
 
 		        	}
