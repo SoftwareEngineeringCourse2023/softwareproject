@@ -228,7 +228,7 @@ public class LoginSteps {
 		
 	public static void  usernotfound () {
 		
-		if(isLoginonuser==true) {
+		if(isLoginonuser) {
 			setxnan(-1);
 		}
 		
