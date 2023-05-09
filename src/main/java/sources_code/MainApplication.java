@@ -43,19 +43,19 @@ public class MainApplication {
 		if(log.getisLoginadmin()==true){
 
 			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-			LOGGER.log(Level.INFO,"welacome to admin: "+LoginSteps. userslogin.get(x).getName());
+			LOGGER.log(Level.INFO,"welacome to admin:{0} ",LoginSteps. userslogin.get(x).getName());
 	        admin();
 		}
 		else if (log.getisLoginworker()==true) {
 			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
 			
-			LOGGER.log(Level.INFO,"welacome to worker: "+LoginSteps. userslogin.get(x).getName());
+			LOGGER.log(Level.INFO,"welacome to worker:{0} ",LoginSteps. userslogin.get(x).getName());
             worker();
 
 		}
 		else {
 			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-			LOGGER.log(Level.INFO,"welacome to customer: "+LoginSteps. userslogin.get(x).getName());
+			LOGGER.log(Level.INFO,"welacome to customer:{0} ",LoginSteps. userslogin.get(x).getName());
             customer();
 		}
 	}
@@ -69,13 +69,13 @@ public class MainApplication {
 		input = new Scanner(System.in);
 
         while(flge1==1) {
-        	System.out.println("| *****Menu*****|\n ");
-			System.out.println("| 1. prodect                      |\n");
-			System.out.println("| 2. customer                     |\n");
-			System.out.println("| 3. worker                       |\n");
-			System.out.println("| 4.reports_about_business        |\n");
-			System.out.println("| 5.all order                     |\n");
-			System.out.println("| 6.logout                        |\n");
+        	LOGGER.log(Level.INFO," *****Menu***** \n ");
+        	LOGGER.log(Level.INFO," 1. prodect                      \n");
+        	LOGGER.log(Level.INFO," 2. customer                     \n");
+        	LOGGER.log(Level.INFO," 3. worker                       \n");
+        	LOGGER.log(Level.INFO," 4.reports_about_business        \n");
+        	LOGGER.log(Level.INFO," 5.all order                     \n");
+        	LOGGER.log(Level.INFO," 6.logout                        \n");
 
 			int number=Integer.parseInt(input.nextLine());
 			switch(number) {
@@ -83,12 +83,12 @@ public class MainApplication {
 				 int flge2=1;
 		        input1 = new Scanner(System.in);
 				while(flge2==1) {
-					System.out.println("| *****Menu*****|\n ");
-	    			System.out.println("| 1. show all prodect             |\n");
-	    			System.out.println("| 2.Add new prodect               |\n");
-	    			System.out.println("| 3. update prodect               |\n");
-	    			System.out.println("| 4.delete prodect                |\n");
-	    			System.out.println("| 5.close                        |\n");
+					LOGGER.log(Level.INFO," *****Menu*****\n ");
+					LOGGER.log(Level.INFO," 1. show all prodect             \n");
+					LOGGER.log(Level.INFO," 2.Add new prodect               \n");
+					LOGGER.log(Level.INFO," 3. update prodect               \n");
+					LOGGER.log(Level.INFO," 4.delete prodect                \n");
+					LOGGER.log(Level.INFO," 5.close                         \n");
 
 	    			int number1=Integer.parseInt(input1.nextLine());
 	    			switch(number1) {
@@ -101,7 +101,7 @@ public class MainApplication {
 				        	count++;
 				        }
 				        LOGGER.log(Level.INFO,"\n");
-				        LOGGER.log(Level.INFO,"number of prodect= "+count);
+				        LOGGER.log(Level.INFO,"number of prodect= {0}"+count);
 
 	    				break;
 	    			}
@@ -113,7 +113,7 @@ public class MainApplication {
 	    				break;
 	    			}
                    case 3:{
-                	   pro.carpetdetails();
+                	   		pro.carpetdetails();
 	    				   pro.coverdetails();
 	    				   pro.updateProduct();
 	    				
@@ -154,12 +154,12 @@ public class MainApplication {
 				 int flge3=1;
  		        input1 = new Scanner(System.in);
  				while(flge3==1) {
- 					System.out.println("| *****Menu*****|\n ");
- 	    			System.out.println("| 1. show all customer             |\n");
- 	    			System.out.println("| 2.Add new customer               |\n");
- 	    			System.out.println("| 3. update customer               |\n");
- 	    			System.out.println("| 4.delete customer               |\n");
- 	    			System.out.println("| 5.close                        |\n");
+ 					LOGGER.log(Level.INFO," *****Menu***** \n ");
+ 					LOGGER.log(Level.INFO," 1. show all customer             \n");
+ 					LOGGER.log(Level.INFO," 2.Add new customer               \n");
+ 					LOGGER.log(Level.INFO," 3. update customer               \n");
+ 					LOGGER.log(Level.INFO," 4.delete customer                \n");
+ 					LOGGER.log(Level.INFO," 5.close                          \n");
  	    			int number1=Integer.parseInt(input1.nextLine());
  	    			switch(number1) {
  	    			case 1:{
@@ -220,7 +220,7 @@ public class MainApplication {
 			}
 			case 6:{
   				 flge1=0;
-                log.setisLoginadmin(false);
+                LoginSteps.setisLoginadmin(false);
 				break;
 			}
 			
@@ -238,22 +238,22 @@ public class MainApplication {
     		LoginSteps.Whos_the_user();
     		int x1=LoginSteps.x;
     		System.out.println(x1);
-               log.setx(x1);
+               LoginSteps.setx(x1);
     		 
     		if(log.getisLoginadmin()==true){
 
     			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-    			LOGGER.log(Level.INFO,"welacome to admin: "+LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,"welacome to admin: {0}",LoginSteps. userslogin.get(x1).getName());
     	        admin();
     		}
     		else if (log.getisLoginworker()==true) {
     			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-    			LOGGER.log(Level.INFO,"welacome to worker: "+LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,"welacome to worker:{0} ",LoginSteps. userslogin.get(x1).getName());
                 worker();
     		}
     		else {
     			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-    			LOGGER.log(Level.INFO,"welacome to customer: "+LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,"welacome to customer:{0} ",LoginSteps. userslogin.get(x1).getName());
                 customer();
     		}
     		
@@ -266,13 +266,13 @@ public class MainApplication {
 		input = new Scanner(System.in);
 
         while(flge1==1) {
-        	System.out.println("| *****Menu******|\n ");
-        	System.out.println("| 1. Add prodect in shoppingcart       |\n");
-			System.out.println("| 2. Show all prodect in shoppingcart  |\n");
-			System.out.println("| 3. Remove prodect in shoppingcar     |\n");
-			System.out.println("| 4. Cheack out                        |\n");
-			System.out.println("| 5. Messages                          |\n");
-			System.out.println("| 6. Logout                            |\n");
+        	LOGGER.log(Level.INFO," *****Menu****** \n ");
+        	LOGGER.log(Level.INFO," 1. Add prodect in shoppingcart       \n");
+        	LOGGER.log(Level.INFO," 2. Show all prodect in shoppingcart  \n");
+        	LOGGER.log(Level.INFO," 3. Remove prodect in shoppingcar     \n");
+        	LOGGER.log(Level.INFO," 4. Cheack out                        \n");
+        	LOGGER.log(Level.INFO," 5. Messages                          \n");
+        	LOGGER.log(Level.INFO," 6. Logout                            \n");
 
 			int number=Integer.parseInt(input.nextLine());
 			switch(number) {
@@ -301,7 +301,7 @@ public class MainApplication {
 			}
 			case 6:{
 				flge1=0;
-				log.setisLogincustomer(false);
+				LoginSteps.setisLogincustomer(false);
 				break;
 			}
 			
@@ -323,21 +323,21 @@ public class MainApplication {
     		LoginSteps.inti();
     		LoginSteps.Whos_the_user();
     		int x1=LoginSteps.x;
-    		log.setx(x1);
+    		LoginSteps.setx(x1);
 			if(log.getisLoginadmin()==true){
 
 				LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-				LOGGER.log(Level.INFO,"welacome to admin: "+LoginSteps. userslogin.get(x1).getName());
+				LOGGER.log(Level.INFO,"welacome to admin: {0}",LoginSteps. userslogin.get(x1).getName());
     	        admin();
     		}
     		else if (log.getisLoginworker()==true) {
     			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-    			LOGGER.log(Level.INFO,"welacome to worker: "+LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,"welacome to worker: {0}",LoginSteps. userslogin.get(x1).getName());
                 worker();
     		}
     		else {
     			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-    			LOGGER.log(Level.INFO,"welacome to customer: "+LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,"welacome to customer: {0}",LoginSteps. userslogin.get(x1).getName());
                 customer();
     		}
     		
@@ -351,10 +351,10 @@ public class MainApplication {
 			input = new Scanner(System.in);
 
 	        while(flge1==1) {
-	        	System.out.println("| *************Menu******************|\n ");
-	        	System.out.println("| 1. show order                      |\n");
-				System.out.println("| 2. select situation                |\n");
-				System.out.println("| 3.logout                           |\n");
+	        	LOGGER.log(Level.INFO," *************Menu******************\n ");
+	        	LOGGER.log(Level.INFO," 1. show order                      \n");
+	        	LOGGER.log(Level.INFO," 2. select situation                \n");
+	        	LOGGER.log(Level.INFO," 3.logout                           \n");
 
 				int number=Integer.parseInt(input.nextLine());
 				switch(number) {
@@ -368,7 +368,7 @@ public class MainApplication {
 				}
 				case 3:{
 					flge1=0;
-					log.setisLoginworker(false);
+					LoginSteps.setisLoginworker(false);
 					break;
 				}
 				
@@ -385,21 +385,21 @@ public class MainApplication {
 			    		LoginSteps.inti();
 			    		LoginSteps.Whos_the_user();
 			    		int x1=LoginSteps.x;
-			    		log.setx(x1);
+			    		LoginSteps.setx(x1);
 						if(log.getisLoginadmin()==true){
 
 							LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-							LOGGER.log(Level.INFO,"welacome to admin: "+LoginSteps. userslogin.get(x1).getName());
+							LOGGER.log(Level.INFO,"welacome to admin: {0}",LoginSteps. userslogin.get(x1).getName());
 			    	        admin();
 			    		}
 			    		else if (log.getisLoginworker()==true) {
 			    			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-			    			LOGGER.log(Level.INFO,"welacome to worker: "+LoginSteps. userslogin.get(x1).getName());
+			    			LOGGER.log(Level.INFO,"welacome to worker: {0}",LoginSteps. userslogin.get(x1).getName());
 			                worker();
 			    		}
 			    		else {
 			    			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-			    			LOGGER.log(Level.INFO,"welacome to customer: "+LoginSteps. userslogin.get(x1).getName());
+			    			LOGGER.log(Level.INFO,"welacome to customer: {0}",LoginSteps. userslogin.get(x1).getName());
 			                customer();
 			    		}
 			    		
