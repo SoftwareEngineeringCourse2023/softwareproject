@@ -119,7 +119,7 @@ public class Customersteps {
 	
 public void saveinformationcustmer(){
 	
-	System.out.println("enter id =");
+	LOGGER.log(Level.INFO,"enter id =");
 	  input2 = new Scanner(System.in);
 	 int idd=input2.nextInt();  
 	  
@@ -131,7 +131,7 @@ public void saveinformationcustmer(){
 		
 	  
 	  if(issavee) {
-		  System.out.println(issavee);
+		  LOGGER.log(Level.INFO,"{0}",issavee);
 
 		  LOGGER.log(Level.INFO,"Enter name =");
 	  input2 = new Scanner(System.in);
@@ -218,7 +218,7 @@ input2 = new Scanner(System.in);
  for(int i=0;i<mylist.size();i++) {
 	 if(mylist.get(i).getid()==id1) {
 		mylist.remove(i) ;
-		i--;
+		
 		LOGGER.log(Level.INFO,"Customer deleted successfully.");
 
 	 }
@@ -285,7 +285,7 @@ public void addshopping() {
 					   }	
 				  break; 
 					  
-	    		}//case2
+	    		}
 	    		case 3:{
 	    			f=0;
 	    			break;}
@@ -330,7 +330,7 @@ public void addshopping() {
 								   
 public void showshopping() {
 	
-	System.out.println(log.getx());
+	LOGGER.log(Level.INFO,"{0}",log.getx());
 	
 	for(int k=0;k<mylist.get(log.getx()).shoppingcart.size();k++) {
     	for(int i=0;i<rugDetails.size();i++) {
@@ -373,7 +373,7 @@ public void removeshopping() {
 				 
 				 
 		  mylist.get(log.getx()).shoppingcart.remove(j);
-		  j--;
+		  
 		  }
 	 }
 	 }
@@ -394,14 +394,14 @@ if(mylist.get(log.getx()).shoppingcart .isEmpty() ) {
 		InvoiceSteps.setisgenerate(true);
 		LOGGER.log(Level.INFO,"\n -----------------------------------------------------");
 		LOGGER.log(Level.INFO,"                -------Receipt ---------        ");
-		LOGGER.log(Level.INFO," Address :{0} "+mylist.get(log.getx()).getaddress());
+		LOGGER.log(Level.INFO," Address :{0} ",mylist.get(log.getx()).getaddress());
 	LOGGER.log(Level.INFO,"\n -----------------------------------------------------");
 
-	for(ProdectSteps pro :mylist.get(log.getx()).shoppingcart) {
-		   pro.print();
+	for(ProdectSteps promas :mylist.get(log.getx()).shoppingcart) {
+		   promas.print();
 		   counter++;
 		   }
-	LOGGER.log(Level.INFO,"Total balance={0}"+mylist.get(log.getx()).getbalance());
+	LOGGER.log(Level.INFO,"Total balance={0}",mylist.get(log.getx()).getbalance());
 		LOGGER.log(Level.INFO,"  -----------------------------------------------------");
 
 		if(counter>=1||counter<=5) {
@@ -561,7 +561,7 @@ default :
 
 }
 public void sendnotification() {
-	if(Worker.isNotification()==true) {
+	if(Worker.isNotification()) {
 		LOGGER.log(Level.INFO,"Your cleaning order is complete. Thank you for using our Application! ");
 
 	}
