@@ -18,15 +18,13 @@ public class ProdectSteps {
 	    private  String cleaninig;
 	    private  int quantity;
 	    
-	    ProdectSteps(String category,int id,String name, String picture, String description, double price, String material, String cleaninig,int quantity) {
+	    ProdectSteps(String category,int id,String name, String description, double price, String material,int quantity) {
 	    	this.category = category;
 	    	this.id = id;
 	    	this.name = name;
-	    	this.picture = picture;
 	    	this.description = description;
 	    	this.price =price ;
 	    	this.material = material;
-	    	this.cleaninig = cleaninig;
 	    	this.quantity=(quantity);
 	    	
 	    }
@@ -111,10 +109,10 @@ public class ProdectSteps {
 		}
 
 		public void init() {
-			rugDetails.add(new ProdectSteps(ACTION_2,1, "Kitchen cleaning","www.kitchenimg.com","carpet sizes: 123*75",420,"Triexta Carpeting","Kitchen cleaning",1));
-			rugDetails.add(new ProdectSteps(ACTION_2,2, "Bathroom cleaning","www.bathimg.com", "carpet sizes: 20*75",100,"Acrylic Carpeting","Bathroom cleaning",1));
-			rugDetails.add(new ProdectSteps(ACTION_1,3, "Livingroom cleaning","www.livingimg.com", "carpet sizes: 200*100",345,"Polyster Carpeting","Living room cleaning",1));
-			rugDetails.add(new ProdectSteps(ACTION_1,4, "Bedrooms covers cleaning","www.bedroomimg.com", "carpet sizes: 100*100",150,"Cotton","Bedroom cleaning",1));
+			rugDetails.add(new ProdectSteps(ACTION_2,1, "Kitchen cleaning","carpet sizes: 123*75",420,"Triexta Carpeting",1));
+			rugDetails.add(new ProdectSteps(ACTION_2,2, "Bathroom cleaning", "carpet sizes: 20*75",100,"Acrylic Carpeting",1));
+			rugDetails.add(new ProdectSteps(ACTION_1,3, "Livingroom cleaning", "carpet sizes: 200*100",345,"Polyster Carpeting",1));
+			rugDetails.add(new ProdectSteps(ACTION_1,4, "Bedrooms covers cleaning", "carpet sizes: 100*100",150,"Cotton",1));
 
 				}
 		
@@ -181,9 +179,7 @@ public class ProdectSteps {
 			 input0 = new Scanner(System.in);
 			 String nameproduct =  input0.next();
 			
-			 LOGGER.log(Level.INFO,"Enter picture product= ");
-			 input0 = new Scanner(System.in);
-			 String pe = input0.next();
+			 
 			 
 			 LOGGER.log(Level.INFO, "Enter the discription =  ");
 			 input0 = new Scanner(System.in);
@@ -197,10 +193,8 @@ public class ProdectSteps {
 			 input0 = new Scanner(System.in);
 			 String m =  input0.next();
 			 
-			 LOGGER.log(Level.INFO,"Enter cleanning product= ");
-			 input0 = new Scanner(System.in);
-			 String c=  input0.next();
-			 rugDetails.add(new ProdectSteps (catepro,idpro,nameproduct,pe,dis,priceprod,m,c,1));
+			
+			 rugDetails.add(new ProdectSteps (catepro,idpro,nameproduct,dis,priceprod,m,1));
 			 
 			
 			  
@@ -236,9 +230,7 @@ public class ProdectSteps {
 		        input0 = new Scanner(System.in);
 				 String namepro =  input0.next();
 				
-				 LOGGER.log(Level.INFO,"Enter picture product=");
-				 input0 = new Scanner(System.in);
-				 String pe =  input0.next();
+				 
 				 
 				 LOGGER.log(Level.INFO,"Enter discription product=");
 				 input0 = new Scanner(System.in);
@@ -252,10 +244,8 @@ public class ProdectSteps {
 				 input0 = new Scanner(System.in);
 				 String m =  input0.next();
 				 
-				 LOGGER.log(Level.INFO,"Enter cleanning product=");
-				 input0 = new Scanner(System.in);
-				 String c=  input0.next();
-				 rugDetails.add(new ProdectSteps (ctg,idproduct,namepro,pe,dis,priceprdct,m,c,1));
+				 
+				 rugDetails.add(new ProdectSteps (ctg,idproduct,namepro,dis,priceprdct,m,1));
 				 
 				 LOGGER.log(Level.INFO,"Product added successfully.");
 		    }

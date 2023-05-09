@@ -304,8 +304,8 @@ public void addshopping() {
 						LOGGER.log(Level.INFO,"Enter number of quantity=");
 					   copy =(input2.nextInt());
 						  mylist.get(log.getx()). setbalance(mylist.get(log.getx()).getbalance()+(rugDetails.get(j).getprice()*copy));
-					   mylist.get(log.getx()).shoppingcart.add(new ProdectSteps(rugDetails.get(j).getCategory(),rugDetails.get(j).getid(),rugDetails.get(j).getName(),rugDetails.get(j).getPicture(),rugDetails.get(j).getDescriptions(),
-							  rugDetails.get(j).getprice(),rugDetails.get(j).getMaterial(),rugDetails.get(j).getCleaning(),copy));
+					   mylist.get(log.getx()).shoppingcart.add(new ProdectSteps(rugDetails.get(j).getCategory(),rugDetails.get(j).getid(),rugDetails.get(j).getName(),rugDetails.get(j).getDescriptions(),
+							  rugDetails.get(j).getprice(),rugDetails.get(j).getMaterial(),copy));
 				   
 				 }
 				 
@@ -319,8 +319,8 @@ public void addshopping() {
 					LOGGER.log(Level.INFO,"Enter number of quantity=");
 				   copy =Integer.parseInt(input2.nextLine());
 					  mylist.get(log.getx()). setbalance(mylist.get(log.getx()).getbalance()+(rugDetails.get(j).getprice()*copy));
-				   mylist.get(log.getx()).shoppingcart.add(new ProdectSteps(rugDetails.get(j).getCategory(),rugDetails.get(j).getid(),rugDetails.get(j).getName(),rugDetails.get(j).getPicture(),rugDetails.get(j).getDescriptions(),
-						  rugDetails.get(j).getprice(),rugDetails.get(j).getMaterial(),rugDetails.get(j).getCleaning(),copy));
+				   mylist.get(log.getx()).shoppingcart.add(new ProdectSteps(rugDetails.get(j).getCategory(),rugDetails.get(j).getid(),rugDetails.get(j).getName(),rugDetails.get(j).getDescriptions(),
+						  rugDetails.get(j).getprice(),rugDetails.get(j).getMaterial(),copy));
 			   
 			 }
 			 
@@ -420,9 +420,11 @@ if(mylist.get(log.getx()).shoppingcart .isEmpty() ) {
 			Worker.setAvailable(true);
 	             for(int j=0;j<mylist.get(log.getx()).shoppingcart.size();j++) {
 	            	
-	            	 order.add(new Order(new OrderParameter()));
-					 writefile(); 
-					w.workerlist.get(log.getx()).l.add(new Order(new OrderParameter()));
+	            	 order.add(new Order(log.getx() ,mylist.get(log.getx()).shoppingcart.get(j).getCategory(),mylist.get(log.getx()).shoppingcart.get(j).getid(),mylist.get(log.getx()).shoppingcart.get(j).getName(),
+							 mylist.get(log.getx()).shoppingcart.get(j).getprice(),mylist.get(log.getx()).shoppingcart.get(j).getMaterial(),mylist.get(log.getx()).shoppingcart.get(j).getQuantity()));
+					
+					w.workerlist.get(log.getx()).l.add(new Order(log.getx() ,mylist.get(log.getx()).shoppingcart.get(j).getCategory(),mylist.get(log.getx()).shoppingcart.get(j).getid(),mylist.get(log.getx()).shoppingcart.get(j).getName(),
+							 mylist.get(log.getx()).shoppingcart.get(j).getprice(),mylist.get(log.getx()).shoppingcart.get(j).getMaterial(),mylist.get(log.getx()).shoppingcart.get(j).getQuantity()));
 				 }
 	            
 	            
@@ -591,25 +593,7 @@ public void ccustomernottrue() {
 }
 
 
-private void writefile()
-{
-    try
-    {
-    File writef = new File("input.txt"); 
-    PrintWriter write = new PrintWriter(writef);
-    for(int i=0;i<mylist.get(log.getx()).order.size();i++)
-    {
-    	String tostring=(order.get(i).getidentifier()+order.get(i).getCategory()+order.get(i).getId()+order.get(i).getName()+order.get(i).getPicture()+order.get(i).getDescription()+order.get(i).getPrice()+order.get(i).getMaterial()+order.get(i).getCleaninig()+order.get(i).getQuantity());
-    
-        write.print(tostring);
-    }
-    write.close();
-    }
-    catch(FileNotFoundException e)
-    {
-        e.printStackTrace();
-    }
-    }
+
 public boolean receivenotification() {
 	Worker.isNotification();
 	LOGGER.log(Level.INFO,"Done to receive notification ");

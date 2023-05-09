@@ -8,8 +8,8 @@ import java.util.logging.Logger;
 
 public class LoginSteps {
     private static final Logger LOGGER = Logger.getLogger(LoginSteps.class.getName());
-    private static final String entrpass = "Enter password : ";
-    private static final String error =  " Error :( wrong password,please enter password again) :";
+    private static final String ENTERPASS = "Enter password : ";
+    private static final String ERROR =  " Error :( wrong password,please enter password again) :";
 	public LoginSteps() {
    	   LOGGER.log(Level.INFO,"");
 
@@ -116,7 +116,7 @@ public class LoginSteps {
     		input3 = new Scanner(System.in);
  		String usernameprod=input3.nextLine();
  		
- 		 LOGGER.log(Level.INFO,entrpass);
+ 		 LOGGER.log(Level.INFO,ENTERPASS);
 		String pass=input3.nextLine();
 		if(pass.equals("*")) {
 			LOGGER.log(Level.INFO,"invaild ");
@@ -136,7 +136,7 @@ public class LoginSteps {
 		String username=input2.nextLine();
 		for(int i=0;i<userslogin.size()&&i<workerlogin.size();i++) {
 			 if(userslogin.get(i).username.equals(username)) {
-				 LOGGER.log(Level.INFO,entrpass);
+				 LOGGER.log(Level.INFO,ENTERPASS);
 				String pass=input2.nextLine();
 				if(userslogin.get(i).password.equals(pass)) {
 					flag = true;
@@ -144,7 +144,7 @@ public class LoginSteps {
 					return i;
 				}
 				else {
-					 LOGGER.log(Level.INFO,error);
+					 LOGGER.log(Level.INFO,ERROR);
 					String pas=input2.nextLine();
 					if(userslogin.get(i).password.equals(pas)) {
 						flag =true;
@@ -154,7 +154,7 @@ public class LoginSteps {
 			  flag0=true; }
 			 else {
 				 if(workerlogin.get(i).username.equals(username)) {
-					 LOGGER.log(Level.INFO,entrpass);
+					 LOGGER.log(Level.INFO,ENTERPASS);
 						String pass=input2.nextLine();
 						if(workerlogin.get(i).password.equals(pass)) {
 							flag = true;
@@ -162,7 +162,7 @@ public class LoginSteps {
 							return i;
 						}
 						else {
-							 LOGGER.log(Level.INFO,error);
+							 LOGGER.log(Level.INFO,ERROR);
 							String pas=input2.nextLine();
 							if(workerlogin.get(i).password.equals(pas)) {
 								flag =true;
@@ -176,7 +176,7 @@ public class LoginSteps {
 		if(!flag0) {
 			for(int i=0;i<userslogin.size()&&i<workerlogin.size();i++) {
 				 if(userslogin.get(i).username.equals(username)) {
-					 LOGGER.log(Level.INFO,entrpass);
+					 LOGGER.log(Level.INFO,ENTERPASS);
 					String pass=input2.nextLine();
 					if(userslogin.get(i).password.equals(pass)) {
 						flag = true;
@@ -184,7 +184,7 @@ public class LoginSteps {
 						return i;
 					}
 					else {
-						 LOGGER.log(Level.INFO,error);
+						 LOGGER.log(Level.INFO,ERROR);
 						String pas=input2.nextLine();
 						if(userslogin.get(i).password.equals(pas)) {
 							flag =true;
@@ -194,7 +194,7 @@ public class LoginSteps {
 				  flag0=true; }
 				 else {
 					 if(workerlogin.get(i).username.equals(username)) {
-						 LOGGER.log(Level.INFO,entrpass);
+						 LOGGER.log(Level.INFO,ENTERPASS);
 							String pass=input2.nextLine();
 							if(workerlogin.get(i).password.equals(pass)) {
 								flag = true;
@@ -202,7 +202,7 @@ public class LoginSteps {
 								return i;
 							}
 							else {
-								 LOGGER.log(Level.INFO,error);
+								 LOGGER.log(Level.INFO,ERROR);
 								String pas=input2.nextLine();
 								if(workerlogin.get(i).password.equals(pas)) {
 									flag =true;
