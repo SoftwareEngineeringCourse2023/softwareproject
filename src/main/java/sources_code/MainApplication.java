@@ -10,7 +10,9 @@ public class MainApplication {
     private static final Logger LOGGER = Logger.getLogger(MainApplication.class.getName());
 
     private static final String MAIN = "-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n";
-
+    private static final String welctocust =   "welacome to customer: {0}";
+    private static final String welc =    "welacome to worker:{0} ";
+    private static final String welcadmin =     "welacome to admin:{0} ";
 	static ArrayList <Order>order;
 	static ArrayList <LoginSteps> userslogin;
 	static ArrayList<Customersteps> mylist;
@@ -240,17 +242,17 @@ public class MainApplication {
     		if(log.getisLoginadmin()==true){
 
     			LOGGER.log(Level.INFO,MAIN);
-    			LOGGER.log(Level.INFO,"welacome to admin: ",LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,welcadmin,LoginSteps. userslogin.get(x1).getName());
     	        admin();
     		}
     		else if (log.getisLoginworker()==true) {
     			LOGGER.log(Level.INFO,MAIN);
-    			LOGGER.log(Level.INFO,"welacome to worker: ",LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,welc,LoginSteps. userslogin.get(x1).getName());
                 worker();
     		}
     		else {
     			LOGGER.log(Level.INFO,MAIN);
-    			LOGGER.log(Level.INFO,"welacome to customer: ",LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,welctocust,LoginSteps. userslogin.get(x1).getName());
                 customer();
     		}
     		
@@ -322,17 +324,17 @@ public class MainApplication {
 			if(log.getisLoginadmin()==true){
 
 				LOGGER.log(Level.INFO,MAIN);
-				LOGGER.log(Level.INFO,"welcome to admin: ",LoginSteps. userslogin.get(x1).getName());
+				LOGGER.log(Level.INFO,welcadmin,LoginSteps. userslogin.get(x1).getName());
     	        admin();
     		}
     		else if (log.getisLoginworker()==true) {
     			LOGGER.log(Level.INFO,MAIN);
-    			LOGGER.log(Level.INFO,"welcome to worker: ",LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,welc,LoginSteps. userslogin.get(x1).getName());
                 worker();
     		}
     		else {
     			LOGGER.log(Level.INFO,MAIN);
-    			LOGGER.log(Level.INFO,"welcome to customer: ",LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,welctocust,LoginSteps. userslogin.get(x1).getName());
                 customer();
     		}
     		
@@ -382,17 +384,17 @@ public class MainApplication {
 						if(log.getisLoginadmin()==true){
 
 			    			LOGGER.log(Level.INFO,MAIN);
-							LOGGER.log(Level.INFO,"welacome to admin: ",LoginSteps. userslogin.get(x1).getName());
+							LOGGER.log(Level.INFO,welcadmin,LoginSteps. userslogin.get(x1).getName());
 			    	        admin();
 			    		}
 			    		else if (log.getisLoginworker()==true) {
 			    			LOGGER.log(Level.INFO,MAIN);
-			    			LOGGER.log(Level.INFO,"welacome to worker: ",LoginSteps. userslogin.get(x1).getName());
+			    			LOGGER.log(Level.INFO,welc,LoginSteps. userslogin.get(x1).getName());
 			                worker();
 			    		}
 			    		else {
 			    			LOGGER.log(Level.INFO,MAIN);
-			    			LOGGER.log(Level.INFO,"welacome to customer: ",LoginSteps. userslogin.get(x1).getName());
+			    			LOGGER.log(Level.INFO,welctocust,LoginSteps. userslogin.get(x1).getName());
 			                customer();
 			    		}
 			    		
