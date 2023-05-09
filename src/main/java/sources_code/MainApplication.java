@@ -53,7 +53,7 @@ public class MainApplication {
 		else if (log.getisLoginworker()) {
 			LOGGER.log(Level.INFO,MAIN);
 			
-			LOGGER.log(Level.INFO,WELC,LoginSteps. userslogin.get(x).getName());
+			LOGGER.log(Level.INFO,WELC,LoginSteps. workerlogin.get(x).getName());
             worker();
 
 		}
@@ -248,7 +248,7 @@ public class MainApplication {
     		}
     		else if (log.getisLoginworker()) {
     			LOGGER.log(Level.INFO,MAIN);
-    			LOGGER.log(Level.INFO,WELC,LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,WELC,LoginSteps. workerlogin.get(x1).getName());
                 worker();
     		}
     		else {
@@ -330,7 +330,7 @@ public class MainApplication {
     		}
     		else if (log.getisLoginworker()) {
     			LOGGER.log(Level.INFO,MAIN);
-    			LOGGER.log(Level.INFO,WELC,LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,WELC,LoginSteps. workerlogin.get(x1).getName());
                 worker();
     		}
     		else {
@@ -390,7 +390,7 @@ public class MainApplication {
 			    		}
 			    		else if (log.getisLoginworker()) {
 			    			LOGGER.log(Level.INFO,MAIN);
-			    			LOGGER.log(Level.INFO,WELC,LoginSteps. userslogin.get(x1).getName());
+			    			LOGGER.log(Level.INFO,WELC,LoginSteps. workerlogin.get(x1).getName());
 			                worker();
 			    		}
 			    		else {

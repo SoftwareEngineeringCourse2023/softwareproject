@@ -28,7 +28,7 @@ public class Order {
     	this.setQuantity((quantity));
     	
 	}
-		public static List<Order> orderarray=new ArrayList<Order>();
+	protected static List<Order> orderarray=new ArrayList<Order>();
 		public String getCategory() {
 			return categoryn;
 		}
