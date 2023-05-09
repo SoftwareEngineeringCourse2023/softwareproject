@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 
 public class MainApplication {
 	
-    private static final Logger LOGGER = Logger.getLogger(Order.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(MainApplication.class.getName());
 
 	static ArrayList <Order>order;
 	static ArrayList <LoginSteps> userslogin;

@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 public class Worker {
 	public final List<Worker> workerlist=new ArrayList<Worker>();
 	public final  List<Order> l=new  ArrayList <Order>();
-    private static final Logger LOGGER = Logger.getLogger(Order.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(Worker.class.getName());
 
 	Customersteps obj=new Customersteps();
      private static boolean iswaiting;

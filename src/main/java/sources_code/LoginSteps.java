@@ -33,13 +33,13 @@ public class LoginSteps {
 	public int getx() {
 		return x;
 	}
-	public void setx(int x) {
+	public static void setx(int x) {
 		LoginSteps.x=x;
 	}
 	public boolean getisLoginadmin() {
 		return isLoginadmin ;	
 	}
-	public void setisLoginadmin(boolean isLoginadmin) {
+	public static void setisLoginadmin(boolean isLoginadmin) {
 
 		LoginSteps.isLoginadmin = isLoginadmin;		
 	}
@@ -47,21 +47,21 @@ public class LoginSteps {
 	public boolean getisLogincustomer() {
 		return isLogincustomer ;	
 	}
-	public void setisLogincustomer(boolean isLogincustomer) {
+	public static void setisLogincustomer(boolean isLogincustomer) {
 		LoginSteps.isLogincustomer = isLogincustomer;		
 	}
 	
 	public boolean getisLoginworker() {
 		return isLoginworker ;	
 	}
-	public void setisLoginworker(boolean isLoginworker) {
+	public static void setisLoginworker(boolean isLoginworker) {
 		LoginSteps.isLoginworker = isLoginworker;		
 	}
 	
 	public boolean getisLoginonuser() {
 		return isLoginonuser ;	
 	}
-	public void setisLoginonuser(boolean isLoginonuser) {
+	public static void setisLoginonuser(boolean isLoginonuser) {
 		LoginSteps.isLoginonuser = isLoginonuser;		
 	}
 	
