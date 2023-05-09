@@ -419,12 +419,9 @@ if(mylist.get(log.getx()).shoppingcart .isEmpty() ) {
 			Worker.setAvailable(true);
 	             for(int j=0;j<mylist.get(log.getx()).shoppingcart.size();j++) {
 	            	
-				 order.add(new Order(log.getx() ,mylist.get(log.getx()).shoppingcart.get(j).getCategory(),mylist.get(log.getx()).shoppingcart.get(j).getid(),mylist.get(log.getx()).shoppingcart.get(j).getName(),mylist.get(log.getx()).shoppingcart.get(j).getPicture(),mylist.get(log.getx()).shoppingcart.get(j).getDescriptions(),
-						 mylist.get(log.getx()).shoppingcart.get(j).getprice(),mylist.get(log.getx()).shoppingcart.get(j).getMaterial(),mylist.get(log.getx()).shoppingcart.get(j).getCleaning(),mylist.get(log.getx()).shoppingcart.get(j).getQuantity()));
-				 writefile(); 
-				w.workerlist.get(log.getx()).l.add(new Order(log.getx() ,mylist.get(log.getx()).shoppingcart.get(j).getCategory(),mylist.get(log.getx()).shoppingcart.get(j).getid(),mylist.get(log.getx()).shoppingcart.get(j).getName(),mylist.get(log.getx()).shoppingcart.get(j).getPicture(),mylist.get(log.getx()).shoppingcart.get(j).getDescriptions(),
-						 mylist.get(log.getx()).shoppingcart.get(j).getprice(),mylist.get(log.getx()).shoppingcart.get(j).getMaterial(),mylist.get(log.getx()).shoppingcart.get(j).getCleaning(),mylist.get(log.getx()).shoppingcart.get(j).getQuantity()));
-			
+	            	 order.add(new Order(new OrderParameter()));
+					 writefile(); 
+					w.workerlist.get(log.getx()).l.add(new Order(new OrderParameter()));
 				 }
 	            
 	            
@@ -485,7 +482,7 @@ public void report() {
             }
             }
 		for (int i=0;i<rugDetails.size();i++) {
-            if (rugDetails.get(i).getCategory() == "cover") {
+            if (rugDetails.get(i).getCategory() .equals("cover")) {
             	t3++;
             	
             }

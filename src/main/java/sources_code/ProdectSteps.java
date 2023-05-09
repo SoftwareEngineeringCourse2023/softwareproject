@@ -6,7 +6,8 @@ import java.util.logging.Logger;
 
 public class ProdectSteps {
     private static final Logger LOGGER = Logger.getLogger(ProdectSteps.class.getName());
-
+    private static final String ACTION_1 = "cover";
+    private static final String ACTION_2 = "carpet";
 	 private  String category;
 	    private int id;
 		private  String name;
@@ -110,10 +111,10 @@ public class ProdectSteps {
 		}
 
 		public void init() {
-			rugDetails.add(new ProdectSteps("carpet",1, "Kitchen cleaning","www.kitchenimg.com","carpet sizes: 123*75",420,"Triexta Carpeting","Kitchen cleaning",1));
-			rugDetails.add(new ProdectSteps("carpet",2, "Bathroom cleaning","www.bathimg.com", "carpet sizes: 20*75",100,"Acrylic Carpeting","Bathroom cleaning",1));
-			rugDetails.add(new ProdectSteps("cover",3, "Livingroom cleaning","www.livingimg.com", "carpet sizes: 200*100",345,"Polyster Carpeting","Living room cleaning",1));
-			rugDetails.add(new ProdectSteps("cover",4, "Bedrooms covers cleaning","www.bedroomimg.com", "carpet sizes: 100*100",150,"Cotton","Bedroom cleaning",1));
+			rugDetails.add(new ProdectSteps(ACTION_2,1, "Kitchen cleaning","www.kitchenimg.com","carpet sizes: 123*75",420,"Triexta Carpeting","Kitchen cleaning",1));
+			rugDetails.add(new ProdectSteps(ACTION_2,2, "Bathroom cleaning","www.bathimg.com", "carpet sizes: 20*75",100,"Acrylic Carpeting","Bathroom cleaning",1));
+			rugDetails.add(new ProdectSteps(ACTION_1,3, "Livingroom cleaning","www.livingimg.com", "carpet sizes: 200*100",345,"Polyster Carpeting","Living room cleaning",1));
+			rugDetails.add(new ProdectSteps(ACTION_1,4, "Bedrooms covers cleaning","www.bedroomimg.com", "carpet sizes: 100*100",150,"Cotton","Bedroom cleaning",1));
 
 				}
 		
@@ -134,7 +135,7 @@ public class ProdectSteps {
 
 		public void coverdetails() {
 	for (int i=0;i<rugDetails.size();i++) {
-	            if (rugDetails.get(i).getCategory() == "cover") {
+	            if (rugDetails.get(i).getCategory() .equals("cover")) {
 	            	rugDetails.get(i). print();
 	            }
 	            

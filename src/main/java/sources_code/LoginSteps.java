@@ -118,7 +118,7 @@ public class LoginSteps {
  		
  		System.out.println("Enter password : ");
 		String pass=input3.nextLine();
-		if(pass=="*") {
+		if(pass.equals("*")) {
 			System.out.println("invaild ");
 			addnewlogin();
 		}

@@ -21,19 +21,19 @@ public class Order {
 	private int quantity;
 	private int identifier;
 	public Order(){}
-		public Order(int identifier,String category,int id,String name, String picture, String description, double price, String material, String cleaninig,int quantity) {
-	    	this.setidentifier(identifier);
-			this.setCategory(category);
-	    	this.setId(id);
-	    	this.setName(name);
-	    	this.setPicture(picture);
-	    	this.setDescription(description);
-	    	this.setPrice(price) ;
-	    	this.setMaterial(material);
-	    	this.setCleaninig(cleaninig);
-	    	this.setQuantity((quantity));
-	    	
-		}
+	public Order(OrderParameter parameterObject) {
+    	this.setId(parameterObject.getiDn());
+		this.setCategory(parameterObject.getcategoryn());
+    	this.setId(parameterObject.getido());
+    	this.setName(parameterObject.getnamen());
+    	this.setPicture(parameterObject.getpicturen());
+    	this.setDescription(parameterObject.getdescriptionn());
+    	this.setPrice(parameterObject.getpricen()) ;
+    	this.setMaterial(parameterObject.getmaterialn());
+    	this.setCleaninig(parameterObject.getcleaninign());
+    	this.setQuantity((parameterObject.getquantityn()));
+    	
+	}
 		public final List<Order> or=new ArrayList<Order>();
 		public String getCategory() {
 			return category;
