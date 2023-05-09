@@ -19,7 +19,7 @@ public class Order {
 	private int identifier;
 	public Order(){}
 	public Order(int identifier,String categoryn,int id,String name, double price, String material,int quantity) {
-    	this.setID(identifier);
+    	this.setidentifier(identifier);
 		this.setCategory(categoryn);
     	this.setId(id);
     	this.setName(name);
@@ -28,7 +28,7 @@ public class Order {
     	this.setQuantity((quantity));
     	
 	}
-		public List<Order> order=new ArrayList<Order>();
+		public static List<Order> orderarray=new ArrayList<Order>();
 		public String getCategory() {
 			return categoryn;
 		}
@@ -54,10 +54,10 @@ public class Order {
 		public void setPrice(double price) {
 			this.price = price;
 		}
-		public int getID() {
+		public int getidentifier() {
 			return identifier;
 		}
-		public void setID(int identifier) {
+		public void setidentifier(int identifier) {
 			this.identifier = identifier;
 		}
 		public int getQuantity() {

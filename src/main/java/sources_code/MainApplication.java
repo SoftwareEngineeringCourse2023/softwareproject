@@ -44,13 +44,13 @@ public class MainApplication {
 		
 		
 		 
-		if(log.getisLoginadmin()==true){
+		if(log.getisLoginadmin()){
 
 			LOGGER.log(Level.INFO,MAIN);
 			LOGGER.log(Level.INFO,WELCADMIN,LoginSteps. userslogin.get(x).getName());
 	        admin();
 		}
-		else if (log.getisLoginworker()==true) {
+		else if (log.getisLoginworker()) {
 			LOGGER.log(Level.INFO,MAIN);
 			
 			LOGGER.log(Level.INFO,WELC,LoginSteps. userslogin.get(x).getName());
@@ -240,13 +240,13 @@ public class MainApplication {
      	   LOGGER.log(Level.INFO,"{0}",x1);
                LoginSteps.setx(x1);
     		 
-    		if(log.getisLoginadmin()==true){
+    		if(log.getisLoginadmin()){
 
     			LOGGER.log(Level.INFO,MAIN);
     			LOGGER.log(Level.INFO,WELCADMIN,LoginSteps. userslogin.get(x1).getName());
     	        admin();
     		}
-    		else if (log.getisLoginworker()==true) {
+    		else if (log.getisLoginworker()) {
     			LOGGER.log(Level.INFO,MAIN);
     			LOGGER.log(Level.INFO,WELC,LoginSteps. userslogin.get(x1).getName());
                 worker();
@@ -322,13 +322,13 @@ public class MainApplication {
     		LoginSteps.whostheuser();
     		int x1=LoginSteps.getxmas();
     		LoginSteps.setx(x1);
-			if(log.getisLoginadmin()==true){
+			if(log.getisLoginadmin()){
 
 				LOGGER.log(Level.INFO,MAIN);
 				LOGGER.log(Level.INFO,WELCADMIN,LoginSteps. userslogin.get(x1).getName());
     	        admin();
     		}
-    		else if (log.getisLoginworker()==true) {
+    		else if (log.getisLoginworker()) {
     			LOGGER.log(Level.INFO,MAIN);
     			LOGGER.log(Level.INFO,WELC,LoginSteps. userslogin.get(x1).getName());
                 worker();
@@ -382,13 +382,13 @@ public class MainApplication {
 			    		LoginSteps.whostheuser();
 			    		int x1=LoginSteps.getxmas();
 			    		LoginSteps.setx(x1);
-						if(log.getisLoginadmin()==true){
+						if(log.getisLoginadmin()){
 
 			    			LOGGER.log(Level.INFO,MAIN);
 							LOGGER.log(Level.INFO,WELCADMIN,LoginSteps. userslogin.get(x1).getName());
 			    	        admin();
 			    		}
-			    		else if (log.getisLoginworker()==true) {
+			    		else if (log.getisLoginworker()) {
 			    			LOGGER.log(Level.INFO,MAIN);
 			    			LOGGER.log(Level.INFO,WELC,LoginSteps. userslogin.get(x1).getName());
 			                worker();
