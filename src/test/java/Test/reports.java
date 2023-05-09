@@ -16,7 +16,6 @@ public class reports {
 	static Customersteps c = new Customersteps();
 	static ProdectSteps s = new ProdectSteps();
 	static LoginSteps l = new LoginSteps();
-	static ReportsSteps r = new ReportsSteps();
 	@Given("total user ,product and order")
 	public void total_user_product_and_order() {
 		System.out.println("Generate customized reports about business");

@@ -2,7 +2,7 @@ package sources_code;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Order {
@@ -77,10 +77,7 @@ public class Order {
 		public void setidentifier(int iD) {
 			identifier = iD;
 		}
-		public int printidentifier() {
-			LOGGER.info(String.format("ID: %s ", identifier));
-			return identifier;
-		}
+		
 		public int getQuantity() {
 			return quantity;
 		}
@@ -100,67 +97,24 @@ public class Order {
 			this.material = material;
 		}
 		
-		public String printcat() {
-			LOGGER.info(String.format("Category product: %s " , category ));
-			return category;
-		}
-		
-		public int printid() {
-			LOGGER.info(String.format("Id  product: %s  ",getId() ));
-			return id;
-		}
-		
-		public String printname() {
-			LOGGER.info(String.format("Name product: %s",name));
-			return name;
-		}
-		
-		public String printpic() {
-			LOGGER.info(String.format("Link for Picture product: %s ",picture));
-			return picture;
-		}
-		public String printdisc() {
-			LOGGER.info(String.format("The discription : %s ",description));
-			return description;
-		}
-		
-		public double printprice() {
-			LOGGER.info(String.format("The price :  ",price));
-			return price;
-		}
-		
-		public String printmt() {
-			LOGGER.info(String.format("The Material: %s ",material));
-			return material;
-		}
-		
-		public String printcln() {
-			LOGGER.info(String.format("The type cleaning : %s ",cleaninig));
-			return cleaninig;
-		}
-		
-		public int printquan() {
-			LOGGER.info(String.format("The Quantity : ",quantity));
-		
-
-			return quantity;
-		}
-		
-		
+	
+	
+	
 		
 		public void printorder() {
-			 printidentifier();
-			 printcat();
-			 printid();
-			 printname();
-			 printpic();
-			 printdisc();
-			 printprice();
-			 printmt();
-			 printcln();
-			 printquan();
-			
-			 LOGGER.info("\n" );
+
+			LOGGER.log(Level.INFO, "Category product: " + category );
+			LOGGER.log(Level.INFO, "ID: " + getId() );
+
+			LOGGER.log(Level.INFO, "Name product:" + name);
+			LOGGER.log(Level.INFO, "Link for Picture product: " + picture);
+			LOGGER.log(Level.INFO, "The discription: " + description);
+			LOGGER.log(Level.INFO, "The price:  " + price);
+			LOGGER.log(Level.INFO, "The Material: " + material);
+			LOGGER.log(Level.INFO, "The type cleaning: " + cleaninig);
+			LOGGER.log(Level.INFO, "The Quantity: " + quantity);		
+
+			LOGGER.log(Level.INFO,"\n");
 
 		}
 		

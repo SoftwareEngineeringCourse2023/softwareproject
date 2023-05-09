@@ -6,13 +6,10 @@ public class ReportsSteps {
 	
 private static boolean isreport;
 
-public ReportsSteps() {
-	
-	Console console = System.console();
-	if (console != null) {
-	    console.writer().print("");
-	}
-}
+
+private ReportsSteps() {
+    throw new IllegalStateException("Utility class");
+  }
 
 
 public static boolean isIsreport() {
