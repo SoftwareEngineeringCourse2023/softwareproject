@@ -2,8 +2,7 @@ package Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static sources_code.LoginSteps.x;
-
+import static sources_code.LoginSteps.getX;
 
 import java.util.Scanner;
 
@@ -32,8 +31,8 @@ public class Generatestatistics {
 		
 		System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
 		LoginSteps.inti();
-		LoginSteps.Whos_the_user();
-		int x=LoginSteps.x;
+		LoginSteps.whostheuser();
+		int x=LoginSteps.getX();
 		System.out.println(x);
            l.setx(x);
 		System.out.println(Customersteps.mylist.get(x).getaddress());
@@ -90,7 +89,7 @@ public class Generatestatistics {
 	
 	public static void customer() {
 		
-		int x=LoginSteps.x;
+		int x=LoginSteps.getX();
         int flge1=1;
 		Scanner input = new Scanner(System.in);
 
@@ -130,8 +129,8 @@ public class Generatestatistics {
        
         	System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
     		LoginSteps.inti();
-    		LoginSteps.Whos_the_user();
-    		int x1=LoginSteps.x;
+    		LoginSteps.whostheuser();
+    		int x1=LoginSteps.getX();
     		log.setx(x1);
 			if(log.getisLoginadmin()==true){
 

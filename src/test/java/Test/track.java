@@ -34,8 +34,8 @@ public class track {
 		
 		System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
 		LoginSteps.inti();
-		LoginSteps.Whos_the_user();
-		int x=LoginSteps.x;
+		LoginSteps.whostheuser();
+		int x=LoginSteps.getX();
 		
            l.setx(x);
 		
@@ -59,7 +59,7 @@ public class track {
 	
 	public static void customer() {
 		
-		int x=LoginSteps.x;
+		int x=LoginSteps.getX();
         int flge1=1;
 		Scanner input = new Scanner(System.in);
 
@@ -119,8 +119,8 @@ public class track {
        
         	System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
     		LoginSteps.inti();
-    		LoginSteps.Whos_the_user();
-    		int x1=LoginSteps.x;
+    		LoginSteps.whostheuser();
+    		int x1=LoginSteps.getX();
     		log.setx(x1);
 			
     		if (log.getisLoginworker()==true) {
@@ -190,8 +190,8 @@ public class track {
 			       
 			        	System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
 			    		LoginSteps.inti();
-			    		LoginSteps.Whos_the_user();
-			    		int x1=LoginSteps.x;
+			    		LoginSteps.whostheuser();
+			    		int x1=LoginSteps.getX();
 			    		log.setx(x1);
 						
 			    		 if (l.getisLoginworker()==true) {

@@ -1,17 +1,18 @@
 package sources_code;
 
-import java.io.Console;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class LoginSteps {
+    private static final Logger LOGGER = Logger.getLogger(LoginSteps.class.getName());
 
 	public LoginSteps() {
-		Console console = System.console();
-		if (console != null) {
-		    console.writer().print("");
-		} 
-	};
+   	   LOGGER.log(Level.INFO,"");
+
+	}
 	 String password;
 	 String username;
 	
@@ -22,7 +23,7 @@ public class LoginSteps {
 	private static boolean f0 =false;
 	private static boolean f1 =false;
 
-	public static int x;
+	private static int x;
 	public LoginSteps(String username, String password) {
 		
 		this.username=username;
@@ -31,10 +32,10 @@ public class LoginSteps {
 		
 	}
 	public int getx() {
-		return x;
+		return getX();
 	}
 	public static void setx(int x) {
-		LoginSteps.x=x;
+		LoginSteps.setX(x);
 	}
 	public boolean getisLoginadmin() {
 		return isLoginadmin ;	
@@ -79,11 +80,11 @@ public class LoginSteps {
 		this.password = password;		
 	}
 	Scanner input=new Scanner(System.in);
-	public static ArrayList <LoginSteps> userslogin= new ArrayList<LoginSteps>();
-	static ArrayList <LoginSteps> workerlogin= new ArrayList<LoginSteps>();
+	public static List <LoginSteps> userslogin= new ArrayList<LoginSteps>();
+	static List <LoginSteps> workerlogin= new ArrayList<LoginSteps>();
 
 	boolean isLogin =false;
-	public int failsauthentication;
+	 protected int failsauthentication;
 	private static Scanner input2;
 	private Scanner input3;
 	
@@ -109,34 +110,32 @@ public class LoginSteps {
      public  void  addnewlogin() {
     	
     	if(Customersteps.isIssave()) {
-    		Console console = System.console();
-    		if (console != null) {
-    		    console.writer().print("Enter Username: ");
+    	   	   LOGGER.log(Level.INFO,"Enter Username: ");
     		} 
     		input3 = new Scanner(System.in);
- 		String username=input3.nextLine();
+ 		String usernameprod=input3.nextLine();
  		
- 		System.out.println("Enter password : ");
+ 		 LOGGER.log(Level.INFO,"Enter password : ");
 		String pass=input3.nextLine();
 		if(pass.equals("*")) {
-			System.out.println("invaild ");
+			LOGGER.log(Level.INFO,"invaild ");
 			addnewlogin();
 		}
-   	 userslogin.add(new LoginSteps(username,pass));
+   	 userslogin.add(new LoginSteps(usernameprod,pass));
     	}
     	 
-     }
-	public static int authenticate_login () {
+     
+	public static int authenticatelogin () {
 		 inti();
 		 inti1();
 		 boolean flag=false;
 		 boolean flag0=false;
-		System.out.println("Enter Username : ");
+		 LOGGER.log(Level.INFO,"Enter Username : ");
 		input2 = new Scanner(System.in);
 		String username=input2.nextLine();
 		for(int i=0;i<userslogin.size()&&i<workerlogin.size();i++) {
 			 if(userslogin.get(i).username.equals(username)) {
-				System.out.println("Enter password : ");
+				 LOGGER.log(Level.INFO,"Enter password : ");
 				String pass=input2.nextLine();
 				if(userslogin.get(i).password.equals(pass)) {
 					flag = true;
@@ -144,7 +143,7 @@ public class LoginSteps {
 					return i;
 				}
 				else {
-					System.out.println(" Error :( wrong password,please enter password again) :");
+					 LOGGER.log(Level.INFO," Error :( wrong password,please enter password again) :");
 					String pas=input2.nextLine();
 					if(userslogin.get(i).password.equals(pas)) {
 						flag =true;
@@ -154,7 +153,7 @@ public class LoginSteps {
 			  flag0=true; }
 			 else {
 				 if(workerlogin.get(i).username.equals(username)) {
-						System.out.println("Enter password : ");
+					 LOGGER.log(Level.INFO,"Enter password : ");
 						String pass=input2.nextLine();
 						if(workerlogin.get(i).password.equals(pass)) {
 							flag = true;
@@ -162,7 +161,7 @@ public class LoginSteps {
 							return i;
 						}
 						else {
-							System.out.println(" Error :( wrong password,please enter password again) :");
+							 LOGGER.log(Level.INFO," Error :( wrong password,please enter password again) :");
 							String pas=input2.nextLine();
 							if(workerlogin.get(i).password.equals(pas)) {
 								flag =true;
@@ -173,10 +172,10 @@ public class LoginSteps {
 			 }
 			 }
 			 
-		if(flag0==false) {
+		if(!flag0) {
 			for(int i=0;i<userslogin.size()&&i<workerlogin.size();i++) {
 				 if(userslogin.get(i).username.equals(username)) {
-					System.out.println("Enter password : ");
+					 LOGGER.log(Level.INFO,"Enter password : ");
 					String pass=input2.nextLine();
 					if(userslogin.get(i).password.equals(pass)) {
 						flag = true;
@@ -184,7 +183,7 @@ public class LoginSteps {
 						return i;
 					}
 					else {
-						System.out.println(" Error :( wrong password,please enter password again) :");
+						 LOGGER.log(Level.INFO," Error :( wrong password,please enter password again) :");
 						String pas=input2.nextLine();
 						if(userslogin.get(i).password.equals(pas)) {
 							flag =true;
@@ -194,7 +193,7 @@ public class LoginSteps {
 				  flag0=true; }
 				 else {
 					 if(workerlogin.get(i).username.equals(username)) {
-							System.out.println("Enter password : ");
+						 LOGGER.log(Level.INFO,"Enter password : ");
 							String pass=input2.nextLine();
 							if(workerlogin.get(i).password.equals(pass)) {
 								flag = true;
@@ -202,7 +201,7 @@ public class LoginSteps {
 								return i;
 							}
 							else {
-								System.out.println(" Error :( wrong password,please enter password again) :");
+								 LOGGER.log(Level.INFO," Error :( wrong password,please enter password again) :");
 								String pas=input2.nextLine();
 								if(workerlogin.get(i).password.equals(pas)) {
 									flag =true;
@@ -214,13 +213,13 @@ public class LoginSteps {
 				 }
 		}
 		
-		 if(flag0==false) {
-				System .out.print(" you are not user\n");
+		 if(!flag0) {
+			 LOGGER.log(Level.INFO,"you are not user");
 				isLoginonuser =true;
 			}
-		 if(flag==false) {
+		 if(!flag) {
 			
-				System .out.print("\n you are blocked\n");
+			 LOGGER.log(Level.INFO,"you are blocked");
 				isLoginonuser =true;
 			}
 	return -1;
@@ -229,35 +228,34 @@ public class LoginSteps {
 	public static void  usernotfound () {
 		
 		if(isLoginonuser==true) {
-			x=-1;
+			setX(-1);
 		}
 		
 		
 	}
 	
-	public static void  Whos_the_user () {
+	public static void  whostheuser () {
 		int count1=0;
-		int count=0;
-		String S=null;
-		String A=null;
-		x= authenticate_login ();
-		if(x>-1) {
-			if(f0==true) {S=userslogin.get(x).getpassword();}
-		    if(f1==true) {A=workerlogin.get(x).getpassword();}
+		String str=null;
+		String as=null;
+		setX(authenticatelogin ());
+		if(getX()>-1) {
+			if(f0) {str=userslogin.get(getX()).getpassword();}
+		    if(f1) {as=workerlogin.get(getX()).getpassword();}
 		
-		if(S!=(null) ) {
-		for(int k=0;k<S.length();k++) {
-			 if(Character.isDigit(S.charAt(k))) {
+		if(str!=(null) ) {
+		for(int k=0;k<str.length();k++) {
+			 if(Character.isDigit(str.charAt(k))) {
 				
-			      count++;}
+			      count1++;}
 		}}
-		if( A!=(null) ) {
-		for(int k=0;k<A.length();k++) {
-			 if(Character.isDigit(A.charAt(k))) {
+		if( as!=(null) ) {
+		for(int k=0;k<as.length();k++) {
+			 if(Character.isDigit(as.charAt(k))) {
 			count1++;}}
 		}
 		
-		if("***".equals(S))
+		if("***".equals(str))
 	    {   
 			
 				isLoginadmin=true;
@@ -282,13 +280,19 @@ public class LoginSteps {
 			}
 			
 		
-		if(x==-1) {
+		if(getX()==-1) {
 			isLoginonuser =true;
 		}
 		
 		
 	}
 		
+	}
+	public static int getX() {
+		return x;
+	}
+	public static void setX(int x) {
+		LoginSteps.x = x;
 	}	
 		
 	

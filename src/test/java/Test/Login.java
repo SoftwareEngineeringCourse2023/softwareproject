@@ -5,7 +5,6 @@ import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Test;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
@@ -29,28 +28,28 @@ public class Login {
    }
    @When("I search for name by username <{string}> and by Password <{string}>")
    public void i_search_for_name_by_username_and_by_password(String string, String string2) {
-	   n.authenticate_login();
+	   LoginSteps.authenticatelogin();
    }
   
       @When("I search for name by username <{string}> and by password <{string}>,this user not found")
       public void i_search_for_name_by_username_and_by_password_this_user_not_found(String string, String string2) {
-    	  n.usernotfound ();
+    	  LoginSteps.usernotfound ();
 }
 
 
    @Then("I find {int} admin")
    public void i_find_admin(Integer int1) {
-   	 assertTrue(n.x>-1);
+   	 assertTrue(LoginSteps.getX()>-1);
    }
 
    @Then("I find {int}  Customer")
    public void i_find_customer(Integer int1) {
-   	 assertTrue(n.x>-1);
+   	 assertTrue(LoginSteps.getX()>-1);
    }
    
    @Then("I find {int}  Worker")
    public void i_find_worker(Integer int1) {
-   	 assertTrue(n.x>-1);
+   	 assertTrue(LoginSteps.getX()>-1);
    }
    
 

@@ -34,8 +34,8 @@ public class MainApplication {
 		
 		LOGGER.log(Level.INFO,MAIN);
 		LoginSteps.inti();
-		LoginSteps.Whos_the_user();
-		int x=LoginSteps.x;
+		LoginSteps.whostheuser();
+		int x=LoginSteps.getX();
 		
            LoginSteps.setx(x);
 		
@@ -232,25 +232,25 @@ public class MainApplication {
         	
 			LOGGER.log(Level.INFO,MAIN);
     		LoginSteps.inti();
-    		LoginSteps.Whos_the_user();
-    		int x1=LoginSteps.x;
+    		LoginSteps.whostheuser();
+    		int x1=LoginSteps.getX();
      	   LOGGER.log(Level.INFO,"{0}",x1);
                LoginSteps.setx(x1);
     		 
     		if(log.getisLoginadmin()==true){
 
     			LOGGER.log(Level.INFO,MAIN);
-    			LOGGER.log(Level.INFO,"welacome to admin: {0}",LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,"welacome to admin: ",LoginSteps. userslogin.get(x1).getName());
     	        admin();
     		}
     		else if (log.getisLoginworker()==true) {
     			LOGGER.log(Level.INFO,MAIN);
-    			LOGGER.log(Level.INFO,"welacome to worker:{0} ",LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,"welacome to worker: ",LoginSteps. userslogin.get(x1).getName());
                 worker();
     		}
     		else {
     			LOGGER.log(Level.INFO,MAIN);
-    			LOGGER.log(Level.INFO,"welacome to customer:{0} ",LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,"welacome to customer: ",LoginSteps. userslogin.get(x1).getName());
                 customer();
     		}
     		
@@ -316,23 +316,23 @@ public class MainApplication {
        
 		LOGGER.log(Level.INFO,MAIN);
     		LoginSteps.inti();
-    		LoginSteps.Whos_the_user();
-    		int x1=LoginSteps.x;
+    		LoginSteps.whostheuser();
+    		int x1=LoginSteps.getX();
     		LoginSteps.setx(x1);
 			if(log.getisLoginadmin()==true){
 
 				LOGGER.log(Level.INFO,MAIN);
-				LOGGER.log(Level.INFO,"welcome to admin: {0}",LoginSteps. userslogin.get(x1).getName());
+				LOGGER.log(Level.INFO,"welcome to admin: ",LoginSteps. userslogin.get(x1).getName());
     	        admin();
     		}
     		else if (log.getisLoginworker()==true) {
     			LOGGER.log(Level.INFO,MAIN);
-    			LOGGER.log(Level.INFO,"welcome to worker: {0}",LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,"welcome to worker: ",LoginSteps. userslogin.get(x1).getName());
                 worker();
     		}
     		else {
     			LOGGER.log(Level.INFO,MAIN);
-    			LOGGER.log(Level.INFO,"welcome to customer: {0}",LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,"welcome to customer: ",LoginSteps. userslogin.get(x1).getName());
                 customer();
     		}
     		
@@ -376,23 +376,23 @@ public class MainApplication {
 			       
 	    			LOGGER.log(Level.INFO,MAIN);
 			    		LoginSteps.inti();
-			    		LoginSteps.Whos_the_user();
-			    		int x1=LoginSteps.x;
+			    		LoginSteps.whostheuser();
+			    		int x1=LoginSteps.getX();
 			    		LoginSteps.setx(x1);
 						if(log.getisLoginadmin()==true){
 
 			    			LOGGER.log(Level.INFO,MAIN);
-							LOGGER.log(Level.INFO,"welacome to admin: {0}",LoginSteps. userslogin.get(x1).getName());
+							LOGGER.log(Level.INFO,"welacome to admin: ",LoginSteps. userslogin.get(x1).getName());
 			    	        admin();
 			    		}
 			    		else if (log.getisLoginworker()==true) {
 			    			LOGGER.log(Level.INFO,MAIN);
-			    			LOGGER.log(Level.INFO,"welacome to worker: {0}",LoginSteps. userslogin.get(x1).getName());
+			    			LOGGER.log(Level.INFO,"welacome to worker: ",LoginSteps. userslogin.get(x1).getName());
 			                worker();
 			    		}
 			    		else {
 			    			LOGGER.log(Level.INFO,MAIN);
-			    			LOGGER.log(Level.INFO,"welacome to customer: {0}",LoginSteps. userslogin.get(x1).getName());
+			    			LOGGER.log(Level.INFO,"welacome to customer: ",LoginSteps. userslogin.get(x1).getName());
 			                customer();
 			    		}
 			    		
