@@ -121,7 +121,7 @@ public class ProdectSteps {
 		public void carpetdetails() {
 		
 			for (int i=0;i<rugDetails.size();i++) {
-	            if (rugDetails.get(i).getCategory() .equals("carpet")) {
+	            if (rugDetails.get(i).getCategory() .equals(ACTION_2)) {
 	            	rugDetails.get(i). print();
 	            }
 	            }
@@ -135,7 +135,7 @@ public class ProdectSteps {
 
 		public void coverdetails() {
 	for (int i=0;i<rugDetails.size();i++) {
-	            if (rugDetails.get(i).getCategory() .equals("cover")) {
+	            if (rugDetails.get(i).getCategory() .equals(ACTION_1)) {
 	            	rugDetails.get(i). print();
 	            }
 	            

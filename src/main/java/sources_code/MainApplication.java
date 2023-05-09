@@ -1,6 +1,5 @@
 package sources_code;
 
-import java.io.Console;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -9,6 +8,8 @@ import java.util.logging.Logger;
 public class MainApplication {
 	
     private static final Logger LOGGER = Logger.getLogger(MainApplication.class.getName());
+
+    private static final String MAIN = "-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n";
 
 	static ArrayList <Order>order;
 	static ArrayList <LoginSteps> userslogin;
@@ -31,30 +32,30 @@ public class MainApplication {
 		
 
 		
-		LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+		LOGGER.log(Level.INFO,MAIN);
 		LoginSteps.inti();
 		LoginSteps.Whos_the_user();
 		int x=LoginSteps.x;
 		
-           log.setx(x);
+           LoginSteps.setx(x);
 		
 		
 		 
 		if(log.getisLoginadmin()==true){
 
-			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+			LOGGER.log(Level.INFO,MAIN);
 			LOGGER.log(Level.INFO,"welacome to admin:{0} ",LoginSteps. userslogin.get(x).getName());
 	        admin();
 		}
 		else if (log.getisLoginworker()==true) {
-			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+			LOGGER.log(Level.INFO,MAIN);
 			
 			LOGGER.log(Level.INFO,"welacome to worker:{0} ",LoginSteps. userslogin.get(x).getName());
             worker();
 
 		}
 		else {
-			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+			LOGGER.log(Level.INFO,MAIN);
 			LOGGER.log(Level.INFO,"welacome to customer:{0} ",LoginSteps. userslogin.get(x).getName());
             customer();
 		}
@@ -101,7 +102,7 @@ public class MainApplication {
 				        	count++;
 				        }
 				        LOGGER.log(Level.INFO,"\n");
-				        LOGGER.log(Level.INFO,"number of prodect= {0}"+count);
+				        LOGGER.log(Level.INFO,"number of prodect= {0}",count);
 
 	    				break;
 	    			}
@@ -194,10 +195,8 @@ public class MainApplication {
 	    	     }		
  	    			
              default:
-            	 Console console = System.console();
-         		if (console != null) {
-         		    console.writer().print("Default!");
-         		}
+          	   LOGGER.log(Level.INFO,"Default! ");
+
  	    			
  	    			}
  				}
@@ -225,34 +224,32 @@ public class MainApplication {
 			}
 			
 			 default:
-            	 Console console = System.console();
-         		if (console != null) {
-         		    console.writer().print("Default!");
-         		}
+          	   LOGGER.log(Level.INFO,"Default! ");
+
 			}
         }
         if( flge1==0) {
         	
-        	LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+			LOGGER.log(Level.INFO,MAIN);
     		LoginSteps.inti();
     		LoginSteps.Whos_the_user();
     		int x1=LoginSteps.x;
-    		System.out.println(x1);
+     	   LOGGER.log(Level.INFO,"{0}",x1);
                LoginSteps.setx(x1);
     		 
     		if(log.getisLoginadmin()==true){
 
-    			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+    			LOGGER.log(Level.INFO,MAIN);
     			LOGGER.log(Level.INFO,"welacome to admin: {0}",LoginSteps. userslogin.get(x1).getName());
     	        admin();
     		}
     		else if (log.getisLoginworker()==true) {
-    			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+    			LOGGER.log(Level.INFO,MAIN);
     			LOGGER.log(Level.INFO,"welacome to worker:{0} ",LoginSteps. userslogin.get(x1).getName());
                 worker();
     		}
     		else {
-    			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+    			LOGGER.log(Level.INFO,MAIN);
     			LOGGER.log(Level.INFO,"welacome to customer:{0} ",LoginSteps. userslogin.get(x1).getName());
                 customer();
     		}
@@ -306,10 +303,8 @@ public class MainApplication {
 			}
 			
 			 default:
-            	 Console console = System.console();
-         		if (console != null) {
-         		    console.writer().print("Default!");
-         		}
+          	   LOGGER.log(Level.INFO,"Default! ");
+
 			
 			}
        
@@ -319,25 +314,25 @@ public class MainApplication {
         if( flge1==0)
         {LoginSteps  log= new LoginSteps();
        
-            LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+		LOGGER.log(Level.INFO,MAIN);
     		LoginSteps.inti();
     		LoginSteps.Whos_the_user();
     		int x1=LoginSteps.x;
     		LoginSteps.setx(x1);
 			if(log.getisLoginadmin()==true){
 
-				LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-				LOGGER.log(Level.INFO,"welacome to admin: {0}",LoginSteps. userslogin.get(x1).getName());
+				LOGGER.log(Level.INFO,MAIN);
+				LOGGER.log(Level.INFO,"welcome to admin: {0}",LoginSteps. userslogin.get(x1).getName());
     	        admin();
     		}
     		else if (log.getisLoginworker()==true) {
-    			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-    			LOGGER.log(Level.INFO,"welacome to worker: {0}",LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,MAIN);
+    			LOGGER.log(Level.INFO,"welcome to worker: {0}",LoginSteps. userslogin.get(x1).getName());
                 worker();
     		}
     		else {
-    			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-    			LOGGER.log(Level.INFO,"welacome to customer: {0}",LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,MAIN);
+    			LOGGER.log(Level.INFO,"welcome to customer: {0}",LoginSteps. userslogin.get(x1).getName());
                 customer();
     		}
     		
@@ -373,32 +368,30 @@ public class MainApplication {
 				}
 				
 				 default:
-	            	 Console console = System.console();
-	         		if (console != null) {
-	         		    console.writer().print("Default!");
-	         		}
+              	   LOGGER.log(Level.INFO,"Default! ");
+
 				}
 				 if( flge1==0)
 			        {LoginSteps  log= new LoginSteps();
 			       
-			        LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+	    			LOGGER.log(Level.INFO,MAIN);
 			    		LoginSteps.inti();
 			    		LoginSteps.Whos_the_user();
 			    		int x1=LoginSteps.x;
 			    		LoginSteps.setx(x1);
 						if(log.getisLoginadmin()==true){
 
-							LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+			    			LOGGER.log(Level.INFO,MAIN);
 							LOGGER.log(Level.INFO,"welacome to admin: {0}",LoginSteps. userslogin.get(x1).getName());
 			    	        admin();
 			    		}
 			    		else if (log.getisLoginworker()==true) {
-			    			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+			    			LOGGER.log(Level.INFO,MAIN);
 			    			LOGGER.log(Level.INFO,"welacome to worker: {0}",LoginSteps. userslogin.get(x1).getName());
 			                worker();
 			    		}
 			    		else {
-			    			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+			    			LOGGER.log(Level.INFO,MAIN);
 			    			LOGGER.log(Level.INFO,"welacome to customer: {0}",LoginSteps. userslogin.get(x1).getName());
 			                customer();
 			    		}
