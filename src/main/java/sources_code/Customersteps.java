@@ -218,7 +218,7 @@ input2 = new Scanner(System.in);
  for(int i=0;i<mylist.size();i++) {
 	 if(mylist.get(i).getid()==id1) {
 		mylist.remove(i) ;
-		
+		i--;
 		LOGGER.log(Level.INFO,"Customer deleted successfully.");
 
 	 }
@@ -373,6 +373,7 @@ public void removeshopping() {
 				 
 				 
 		  mylist.get(log.getx()).shoppingcart.remove(j);
+		  j--;
 		  
 		  }
 	 }
@@ -383,7 +384,7 @@ public void ckeckout()	{
 	w.informationworker();
 	int f=1;
 	int counter=0;
-	System.out.println(log.getx());
+	LOGGER.log(Level.INFO,"{0}",log.getx());
 if(mylist.get(log.getx()).shoppingcart .isEmpty() ) {
 	 InvoiceSteps.setisgenerate(false);
 		LOGGER.log(Level.INFO,"shopping cart is null");

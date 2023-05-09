@@ -35,7 +35,7 @@ public class MainApplication {
 		LOGGER.log(Level.INFO,MAIN);
 		LoginSteps.inti();
 		LoginSteps.whostheuser();
-		int x=LoginSteps.getX();
+		int x=LoginSteps.getxmas();
 		
            LoginSteps.setx(x);
 		
@@ -233,7 +233,7 @@ public class MainApplication {
 			LOGGER.log(Level.INFO,MAIN);
     		LoginSteps.inti();
     		LoginSteps.whostheuser();
-    		int x1=LoginSteps.getX();
+    		int x1=LoginSteps.getxmas();
      	   LOGGER.log(Level.INFO,"{0}",x1);
                LoginSteps.setx(x1);
     		 
@@ -317,7 +317,7 @@ public class MainApplication {
 		LOGGER.log(Level.INFO,MAIN);
     		LoginSteps.inti();
     		LoginSteps.whostheuser();
-    		int x1=LoginSteps.getX();
+    		int x1=LoginSteps.getxmas();
     		LoginSteps.setx(x1);
 			if(log.getisLoginadmin()==true){
 
@@ -377,7 +377,7 @@ public class MainApplication {
 	    			LOGGER.log(Level.INFO,MAIN);
 			    		LoginSteps.inti();
 			    		LoginSteps.whostheuser();
-			    		int x1=LoginSteps.getX();
+			    		int x1=LoginSteps.getxmas();
 			    		LoginSteps.setx(x1);
 						if(log.getisLoginadmin()==true){
 

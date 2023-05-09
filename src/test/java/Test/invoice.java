@@ -34,7 +34,7 @@ public class invoice {
 		System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
 		LoginSteps.inti();
 		LoginSteps.whostheuser();
-		int x=LoginSteps.getX();
+		int x=LoginSteps.getxmas();
 		System.out.println(x);
            l.setx(x);
 		System.out.println(Customersteps.mylist.get(x).getaddress());
@@ -52,7 +52,7 @@ public class invoice {
 	
 public static void customer() {
 		
-		int x=LoginSteps.getX();
+		int x=LoginSteps.getxmas();
         int flge1=1;
 		Scanner input = new Scanner(System.in);
 

@@ -39,17 +39,17 @@ public class Login {
 
    @Then("I find {int} admin")
    public void i_find_admin(Integer int1) {
-   	 assertTrue(LoginSteps.getX()>-1);
+   	 assertTrue(LoginSteps.getxmas()>-1);
    }
 
    @Then("I find {int}  Customer")
    public void i_find_customer(Integer int1) {
-   	 assertTrue(LoginSteps.getX()>-1);
+   	 assertTrue(LoginSteps.getxmas()>-1);
    }
    
    @Then("I find {int}  Worker")
    public void i_find_worker(Integer int1) {
-   	 assertTrue(LoginSteps.getX()>-1);
+   	 assertTrue(LoginSteps.getxmas()>-1);
    }
    
 
