@@ -1,8 +1,12 @@
 package sources_code;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ProdectSteps {
+    private static final Logger LOGGER = Logger.getLogger(ProdectSteps.class.getName());
+
 	 private  String category;
 	    private int id;
 		private  String name;
@@ -31,15 +35,14 @@ public class ProdectSteps {
 		private Scanner input0;
 		
 		public void carpetpage() {
-			
-			System.out.println("Welcome to the carpet page!\n");
+			LOGGER.log(Level.INFO, "Welcome to the carpet page!\n ");
 			carpetdetails();			
 			
 			
 		}
 
 		public void coverpage() {
-			System.out.println("Welcome to the cover page!\n");
+			LOGGER.log(Level.INFO,"Welcome to the cover page!\n");
 			coverdetails();
 		 	
 		    
@@ -144,21 +147,18 @@ public class ProdectSteps {
 		public void print() {
 			
 			if(!rugDetails.isEmpty()) {
-				 System.out.printf("Category product: %s || " , category );
-				 System.out.printf("Id  product: %s || ",getid());
-				 System.out.printf("Name product: %s || ",name); 
-				 System.out.printf("Link for Picture product: %s || ",picture);
-				 System.out.printf("The discription : %s || ",description);
-				 System.out.print("The price :  ");
-				 System.out.print(price);
-				 System.out.printf(" || The Material: %s  || ",material);
-				 System.out.printf("The type cleaning : %s || .",cleaninig);
-				 System.out.printf("The Quantity : ");
-				 System.out.print(quantity);
-
-
-				 System.out.print("\n");
-
+				
+				LOGGER.log(Level.INFO, "Category product:{0}  " , category );
+				LOGGER.log(Level.INFO, "ID:{0}  " , getid() );
+				LOGGER.log(Level.INFO, "Name product:{0}" , name);
+				LOGGER.log(Level.INFO, "Link for Picture product:{0} " , picture);
+				LOGGER.log(Level.INFO, "The discription:{0} " , description);
+				LOGGER.log(Level.INFO, "The price: {0} " , price);
+				LOGGER.log(Level.INFO, "The Material: {0}" , material);
+				LOGGER.log(Level.INFO, "The type cleaning: {0}" , cleaninig);
+				LOGGER.log(Level.INFO, "The Quantity:{0} " , quantity);
+				
+			
 					 }
 
 					
@@ -168,59 +168,59 @@ public class ProdectSteps {
 		public void createproduct() {
 			
 			
-			System.out.println("enter Category product=");
+			LOGGER.log(Level.INFO, "Enter the category product=  ");
 			 input0 = new Scanner(System.in);
 			 String Catepro = input0.next();
 			 
-			 System.out.println("enter the id product=");
+			 LOGGER.log(Level.INFO,"Enter the id product= ");
 			 input0 = new Scanner(System.in);
 			 int idpro =  input0.nextInt();
 			 
-			System.out.println("enter name product=");
+			 LOGGER.log(Level.INFO,"Enter name product= ");
 			 input0 = new Scanner(System.in);
 			 String nameproduct =  input0.next();
 			
-			 System.out.println("enter picture product=");
+			 LOGGER.log(Level.INFO,"Enter picture product= ");
 			 input0 = new Scanner(System.in);
 			 String pe = input0.next();
 			 
-			System.out.println("enter discription product=");
+			 LOGGER.log(Level.INFO, "Enter the discription =  ");
 			 input0 = new Scanner(System.in);
 			 String dis =  input0.next();
 			
-			 System.out.println("enter price product=");
+			 LOGGER.log(Level.INFO,"Enter price product= ");
 			 input0 = new Scanner(System.in);
 			double price =  input0.nextDouble();
 			
-			 System.out.println("enter material product=");
+			LOGGER.log(Level.INFO,"Enter material product= ");
 			 input0 = new Scanner(System.in);
 			 String m =  input0.next();
 			 
-			System.out.println("enter cleanning product=");
+			 LOGGER.log(Level.INFO,"Enter cleanning product= ");
 			 input0 = new Scanner(System.in);
 			 String c=  input0.next();
 			 rugDetails.add(new ProdectSteps (Catepro,idpro,nameproduct,pe,dis,price,m,c,1));
 			 
 			
 			  
-			 System.out.println("Product created successfully. ");
+			 LOGGER.log(Level.INFO,"Product created successfully. ");
 			 print();
 			 
 		}
 		
 		public void addproduct() {
 			 input0 = new Scanner(System.in);
-			 System.out.println("Enter product Category: ");
+			 LOGGER.log(Level.INFO,"Enter product Category: ");
 		        String ctg  =  input0.next();
 		       
 		        
-		        System.out.println("Enter the id product=");
+		        LOGGER.log(Level.INFO,"Enter the id product=");
 		        input0 = new Scanner(System.in);
 				 int idproduct =  input0.nextInt();
 				 
 				 for (ProdectSteps product : rugDetails) {
 			            if (product.getid() == id) {
-			            System.out.println("Product id already exists.");
+			            	LOGGER.log(Level.INFO,"Product id already exists.");
 			            for (int i=0;i<rugDetails.size();i++) {
 				            System.out.println(rugDetails.get(i).id);
 
@@ -231,73 +231,73 @@ public class ProdectSteps {
 			            }
 			        }
 				 
-		        System.out.println("enter name product=");
+				 LOGGER.log(Level.INFO,"Enter name product=");
 		        input0 = new Scanner(System.in);
 				 String namepro =  input0.next();
 				
-				 System.out.println("enter picture product=");
+				 LOGGER.log(Level.INFO,"Enter picture product=");
 				 input0 = new Scanner(System.in);
 				 String pe =  input0.next();
 				 
-				System.out.println("enter discription product=");
+				 LOGGER.log(Level.INFO,"Enter discription product=");
 				 input0 = new Scanner(System.in);
 				 String dis =  input0.next();
 				
-				 System.out.println("enter price product=");
+				 LOGGER.log(Level.INFO,"Enter price product=");
 				 input0 = new Scanner(System.in);
 				double priceprdct =  input0.nextDouble();
 				
-				 System.out.println("enter material product=");
+				LOGGER.log(Level.INFO,"Enter material product=");
 				 input0 = new Scanner(System.in);
 				 String m =  input0.next();
 				 
-				System.out.println("enter cleanning product=");
+				 LOGGER.log(Level.INFO,"Enter cleanning product=");
 				 input0 = new Scanner(System.in);
 				 String c=  input0.next();
 				 rugDetails.add(new ProdectSteps (ctg,idproduct,namepro,pe,dis,priceprdct,m,c,1));
 				 
-		        System.out.println("Product added successfully.");
+				 LOGGER.log(Level.INFO,"Product added successfully.");
 		    }
 		    
 		 public void deleteProduct() {
 		    	
 			 input0 = new Scanner(System.in);
-				 System.out.println("Enter product ID: ");
+			 LOGGER.log(Level.INFO,"Enter product ID: ");
 			        int entid  =  input0.nextInt();
 			        for (int i=0;i<rugDetails.size();i++) {
 			            if (rugDetails.get(i).getid() == entid) {
 			            	rugDetails.remove(i);
-				                System.out.println("Product deleted successfully.");
+			            	LOGGER.log(Level.INFO,"Product deleted successfully.");
 				                
 		    	
 			            }
 			            }
-			        System.out.println("Product not found.");
+			        LOGGER.log(Level.INFO,"Product not found.");
 		    }
 		
 			public void updateProduct() {
 				int f=0;
 				 input0 = new Scanner(System.in);
-		        System.out.println("Enter product ID: ");
+				 LOGGER.log(Level.INFO,"Enter product ID: ");
 		       int idmas  =  input0.nextInt();
 		       for (int i=0;i<rugDetails.size();i++) {
 		            if (rugDetails.get(i).getid() == idmas) {
 		            	f=1;
 		      
 						 
-						System.out.println("Enter discription product=");
+		            	LOGGER.log(Level.INFO,"Enter discription product=");
 						 input0 = new Scanner(System.in);
 						 String dis =  input0.next();
 						
-						 System.out.println("Enter price product=");
+						 LOGGER.log(Level.INFO,"Enter price product=");
 						 input0 = new Scanner(System.in);
 						double priceproduct = input0.nextDouble();
 						
-						 System.out.println("Enter material product=");
+						LOGGER.log(Level.INFO,"Enter material product=");
 						 input0 = new Scanner(System.in);
 						 String m =  input0.next();
 						 
-						System.out.println("Enter cleanning product=");
+						 LOGGER.log(Level.INFO,"Enter cleanning product=");
 						 input0 = new Scanner(System.in);
 						 String c=  input0.next();
 						
@@ -305,7 +305,7 @@ public class ProdectSteps {
 
 		    	    	rugDetails.get(i).changeprodect(dis,priceproduct,m,c);
 		               
-		                System.out.println("Product updated successfully.");
+		    	    	LOGGER.log(Level.INFO,"Product updated successfully.");
 		               
 		            }
 		           
@@ -323,7 +323,7 @@ public class ProdectSteps {
 		  
 		  public void  findproductbyname() {
 			  input0= new Scanner(System.in);
-		        System.out.println("Enter product name: ");
+			  LOGGER.log(Level.INFO,"Enter product name: ");
 		        String namenanc  =  input0.next();
 		        ArrayList<ProdectSteps> findByName = new ArrayList<ProdectSteps>();
 		        for (ProdectSteps product : rugDetails) {
