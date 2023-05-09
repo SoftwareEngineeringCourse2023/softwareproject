@@ -3,9 +3,13 @@ package sources_code;
 import java.io.Console;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class MainApplication {
 	
+    private static final Logger LOGGER = Logger.getLogger(Order.class.getName());
+
 	static ArrayList <Order>order;
 	static ArrayList <LoginSteps> userslogin;
 	static ArrayList<Customersteps> mylist;
@@ -27,7 +31,7 @@ public class MainApplication {
 		
 
 		
-		System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+		LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
 		LoginSteps.inti();
 		LoginSteps.Whos_the_user();
 		int x=LoginSteps.x;
@@ -38,20 +42,20 @@ public class MainApplication {
 		 
 		if(log.getisLoginadmin()==true){
 
-			System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-	        System.out.println("welacome to admin: "+LoginSteps. userslogin.get(x).getName());
+			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+			LOGGER.log(Level.INFO,"welacome to admin: "+LoginSteps. userslogin.get(x).getName());
 	        admin();
 		}
 		else if (log.getisLoginworker()==true) {
-			System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
 			
-			System.out.println("welacome to worker: "+LoginSteps. userslogin.get(x).getName());
+			LOGGER.log(Level.INFO,"welacome to worker: "+LoginSteps. userslogin.get(x).getName());
             worker();
 
 		}
 		else {
-			System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-            System.out.println("welacome to customer: "+LoginSteps. userslogin.get(x).getName());
+			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+			LOGGER.log(Level.INFO,"welacome to customer: "+LoginSteps. userslogin.get(x).getName());
             customer();
 		}
 	}
@@ -96,8 +100,8 @@ public class MainApplication {
 				        for (int i=0;i<ProdectSteps.rugDetails.size();i++) {
 				        	count++;
 				        }
-    	    			System.out.println("\n");
-    	    			System.out.println("number of prodect= "+count);
+				        LOGGER.log(Level.INFO,"\n");
+				        LOGGER.log(Level.INFO,"number of prodect= "+count);
 
 	    				break;
 	    			}
@@ -136,7 +140,7 @@ public class MainApplication {
 	    				
 	    				
                    default:
-                       System.out.println("Default! ");
+                	   LOGGER.log(Level.INFO,"Default! ");
                        break;
 	    			
 	    			}}
@@ -229,7 +233,7 @@ public class MainApplication {
         }
         if( flge1==0) {
         	
-        	System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+        	LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
     		LoginSteps.inti();
     		LoginSteps.Whos_the_user();
     		int x1=LoginSteps.x;
@@ -238,18 +242,18 @@ public class MainApplication {
     		 
     		if(log.getisLoginadmin()==true){
 
-    			System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-    	        System.out.println("welacome to admin: "+LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+    			LOGGER.log(Level.INFO,"welacome to admin: "+LoginSteps. userslogin.get(x1).getName());
     	        admin();
     		}
     		else if (log.getisLoginworker()==true) {
-    			System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-                System.out.println("welacome to worker: "+LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+    			LOGGER.log(Level.INFO,"welacome to worker: "+LoginSteps. userslogin.get(x1).getName());
                 worker();
     		}
     		else {
-    			System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-                System.out.println("welacome to customer: "+LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+    			LOGGER.log(Level.INFO,"welacome to customer: "+LoginSteps. userslogin.get(x1).getName());
                 customer();
     		}
     		
@@ -275,7 +279,7 @@ public class MainApplication {
 			case 1:{
 				cus.addshopping();
 				break;
-			}//case1
+			}
 			case 2:{
 				cus.showshopping();
 				break;
@@ -315,25 +319,25 @@ public class MainApplication {
         if( flge1==0)
         {LoginSteps  log= new LoginSteps();
        
-        	System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+            LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
     		LoginSteps.inti();
     		LoginSteps.Whos_the_user();
     		int x1=LoginSteps.x;
     		log.setx(x1);
 			if(log.getisLoginadmin()==true){
 
-    			System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-    	        System.out.println("welacome to admin: "+LoginSteps. userslogin.get(x1).getName());
+				LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+				LOGGER.log(Level.INFO,"welacome to admin: "+LoginSteps. userslogin.get(x1).getName());
     	        admin();
     		}
     		else if (log.getisLoginworker()==true) {
-    			System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-                System.out.println("welacome to worker: "+LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+    			LOGGER.log(Level.INFO,"welacome to worker: "+LoginSteps. userslogin.get(x1).getName());
                 worker();
     		}
     		else {
-    			System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-                System.out.println("welacome to customer: "+LoginSteps. userslogin.get(x1).getName());
+    			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+    			LOGGER.log(Level.INFO,"welacome to customer: "+LoginSteps. userslogin.get(x1).getName());
                 customer();
     		}
     		
@@ -377,25 +381,25 @@ public class MainApplication {
 				 if( flge1==0)
 			        {LoginSteps  log= new LoginSteps();
 			       
-			        	System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+			        LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
 			    		LoginSteps.inti();
 			    		LoginSteps.Whos_the_user();
 			    		int x1=LoginSteps.x;
 			    		log.setx(x1);
 						if(log.getisLoginadmin()==true){
 
-			    			System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-			    	        System.out.println("welacome to admin: "+LoginSteps. userslogin.get(x1).getName());
+							LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+							LOGGER.log(Level.INFO,"welacome to admin: "+LoginSteps. userslogin.get(x1).getName());
 			    	        admin();
 			    		}
 			    		else if (log.getisLoginworker()==true) {
-			    			System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-			                System.out.println("welacome to worker: "+LoginSteps. userslogin.get(x1).getName());
+			    			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+			    			LOGGER.log(Level.INFO,"welacome to worker: "+LoginSteps. userslogin.get(x1).getName());
 			                worker();
 			    		}
 			    		else {
-			    			System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-			                System.out.println("welacome to customer: "+LoginSteps. userslogin.get(x1).getName());
+			    			LOGGER.log(Level.INFO,"-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
+			    			LOGGER.log(Level.INFO,"welacome to customer: "+LoginSteps. userslogin.get(x1).getName());
 			                customer();
 			    		}
 			    		

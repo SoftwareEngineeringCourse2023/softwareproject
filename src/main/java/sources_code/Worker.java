@@ -3,10 +3,13 @@ package sources_code;
 import java.io.Console;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Worker {
 	public final List<Worker> workerlist=new ArrayList<Worker>();
 	public final  List<Order> l=new  ArrayList <Order>();
+    private static final Logger LOGGER = Logger.getLogger(Order.class.getName());
 
 	Customersteps obj=new Customersteps();
      private static boolean iswaiting;
@@ -79,14 +82,11 @@ public void informationworker() {
 	workerlist.add(new Worker(6,"jehad",35,90307654,"haifa"));
 }
 public void showWorker() {
-	System.out.printf(" id :  %s || ",getId());
-	System.out.printf(" Name worker : %s  ||",getName());
-	System.out.printf(" Age worker :  ");
-	System.out.print(getAge());
-	System.out.printf("||  phone worker :  ");
-	System.out.print(getPhone());
-	System.out.printf(" || Address worker : %s .",getAddress());
-	System.out.print(" \n");
+	LOGGER.log(Level.INFO," ID :  {0} ",getId());
+	LOGGER.log(Level.INFO," Name worker :{0} ",getName());
+	LOGGER.log(Level.INFO," Age worker :{0} ",getAge());
+	LOGGER.log(Level.INFO," phone worker:{0}  ",getPhone());
+	LOGGER.log(Level.INFO,"Address worker:{0}",getAddress());
 
 	
 }

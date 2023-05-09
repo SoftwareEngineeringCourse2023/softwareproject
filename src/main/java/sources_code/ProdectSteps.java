@@ -51,8 +51,8 @@ public class ProdectSteps {
 		public String getCategory() {
 			return category;	
 		}
-		public void setCategory(String Catproduct) {
-			this.category = Catproduct;		
+		public void setCategory(String catproduct) {
+			this.category = catproduct;		
 		}
 		
 		public int getid() {
@@ -170,7 +170,7 @@ public class ProdectSteps {
 			
 			LOGGER.log(Level.INFO, "Enter the category product=  ");
 			 input0 = new Scanner(System.in);
-			 String Catepro = input0.next();
+			 String catepro = input0.next();
 			 
 			 LOGGER.log(Level.INFO,"Enter the id product= ");
 			 input0 = new Scanner(System.in);
@@ -190,7 +190,7 @@ public class ProdectSteps {
 			
 			 LOGGER.log(Level.INFO,"Enter price product= ");
 			 input0 = new Scanner(System.in);
-			double price =  input0.nextDouble();
+			double priceprod =  input0.nextDouble();
 			
 			LOGGER.log(Level.INFO,"Enter material product= ");
 			 input0 = new Scanner(System.in);
@@ -199,7 +199,7 @@ public class ProdectSteps {
 			 LOGGER.log(Level.INFO,"Enter cleanning product= ");
 			 input0 = new Scanner(System.in);
 			 String c=  input0.next();
-			 rugDetails.add(new ProdectSteps (Catepro,idpro,nameproduct,pe,dis,price,m,c,1));
+			 rugDetails.add(new ProdectSteps (catepro,idpro,nameproduct,pe,dis,priceprod,m,c,1));
 			 
 			
 			  
@@ -222,7 +222,7 @@ public class ProdectSteps {
 			            if (product.getid() == id) {
 			            	LOGGER.log(Level.INFO,"Product id already exists.");
 			            for (int i=0;i<rugDetails.size();i++) {
-				            System.out.println(rugDetails.get(i).id);
+			            	LOGGER.log(Level.INFO,"{0}",rugDetails.get(i).id);
 
 			            }
 			            
@@ -310,7 +310,7 @@ public class ProdectSteps {
 		            }
 		           
 		        }
-		      if(f==0){ System.out.println("Product not found.");}
+		      if(f==0){ LOGGER.log(Level.INFO,"Product not found.");}
 		    }
 			public void  changeprodect( String description, double price, String material, String cleaninig) {
 				
