@@ -37,11 +37,11 @@ public class invoice {
 		int x=LoginSteps.getxmas();
 		System.out.println(x);
            l.setx(x);
-		System.out.println(Customersteps.mylist.get(x).getaddress());
+		System.out.println(Customersteps.getMylist().get(x).getaddress());
 		
         if(l.getisLogincustomer()==true) {
 			System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-            System.out.println("Welcome to customer: "+LoginSteps.userslogin.get(x).getName());
+            System.out.println("Welcome to customer: "+LoginSteps.getUserslogin().get(x).getName());
             System.out.println();
 
             customer();

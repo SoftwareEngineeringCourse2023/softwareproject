@@ -97,7 +97,7 @@ public class Customersteps {
 		Customersteps.issave = issave;
 	}
 	
-	public static final  List <Customersteps> mylist =new ArrayList<Customersteps>();
+	private static final  List <Customersteps> mylist =new ArrayList<Customersteps>();
 	private Scanner input2;
 	
 
@@ -206,6 +206,7 @@ private void updatecustomrer(int id1, String namenew, int phonenew, String adder
 	
 }
 public void deletecustomer() {
+	int decus = 0;
 	for (Customersteps c:mylist) {
 		c.showcustomer();
 }
@@ -214,23 +215,27 @@ input2 = new Scanner(System.in);
  int id1=input2.nextInt(); 
  for(int i=0;i<mylist.size();i++) {
 	 if(mylist.get(i).getid()==id1) {
-		mylist.remove(i) ;
-		i--;
+		
+		decus = i;
 		LOGGER.log(Level.INFO,"Customer deleted successfully.");
 
 	 }
 	 }
-	
+ 		mylist.remove(decus) ;
 	
 }
 
+
+
+int copy=0;
+int flage=0;
+int f=1;
+int number;
 public void addshopping() {
 	
 	pro.carpetdetails();
 	pro.coverdetails();
-	int copy=0;
-	int flage=0;
-	int f=1;
+	
 	input2 = new Scanner(System.in);
 	LOGGER.log(Level.INFO,"Enter ID=");
 
@@ -244,7 +249,7 @@ public void addshopping() {
 	    				LOGGER.log(Level.INFO,"yes: Enter number 1 to increase\n");
 	    				LOGGER.log(Level.INFO,"yes: Enter number 2 to reduce\n");
 	    				LOGGER.log(Level.INFO,"NO: Enter number 2 \n");
-	    			int number=Integer.parseInt(input2.nextLine()); 
+	    			 number=Integer.parseInt(input2.nextLine()); 
 	    			switch(number) {
 	    			case 1:{
 	    				
@@ -356,6 +361,7 @@ public void showshopping() {
 }
 							   
 public void removeshopping() {
+	int remv = 0;
 	 for(ProdectSteps prosteps :mylist.get(log.getx()).shoppingcart) {
 		 prosteps.print();}
 
@@ -369,11 +375,12 @@ public void removeshopping() {
 				 mylist.get(log.getx()).setbalance((mylist.get(log.getx()).getbalance())-(mylist.get(log.getx()).shoppingcart.get(j).getprice()*mylist.get(log.getx()).shoppingcart.get(j).getQuantity()));
 				 
 				 
-		  mylist.get(log.getx()).shoppingcart.remove(j);
-		  j--;
+		remv = j;
+		 
 		  
 		  }
 	 }
+		  mylist.get(log.getx()).shoppingcart.remove(remv);
 	 }
 	 
 }
@@ -595,6 +602,10 @@ public boolean receivenotification() {
 	Worker.isNotification();
 	LOGGER.log(Level.INFO,"Done to receive notification ");
 	return true;
+}
+
+public static List <Customersteps> getMylist() {
+	return mylist;
 }
 
 

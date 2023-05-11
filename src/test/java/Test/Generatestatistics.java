@@ -35,13 +35,13 @@ public class Generatestatistics {
 		int x=LoginSteps.getxmas();
 		System.out.println(x);
            l.setx(x);
-		System.out.println(Customersteps.mylist.get(x).getaddress());
+		System.out.println(Customersteps.getMylist().get(x).getaddress());
 		
 		 
 		if(l.getisLoginadmin()==true){
 
 			System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-	        System.out.println("Welcome to admin: "+LoginSteps. userslogin.get(x).getName());
+	        System.out.println("Welcome to admin: "+LoginSteps. getUserslogin().get(x).getName());
 	        System.out.println();
 			System.out.println("Show all total orders in application");
 
@@ -50,7 +50,7 @@ public class Generatestatistics {
 		
 		else if(l.getisLogincustomer()==true) {
 			System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-            System.out.println("Welcome to customer: "+LoginSteps. userslogin.get(x).getName());
+            System.out.println("Welcome to customer: "+LoginSteps. getUserslogin().get(x).getName());
             customer();
 		}
 	}
@@ -135,13 +135,13 @@ public class Generatestatistics {
 			if(log.getisLoginadmin()==true){
 
     			System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-    	        System.out.println("Welcome to admin: "+LoginSteps. userslogin.get(x1).getName());
+    	        System.out.println("Welcome to admin: "+LoginSteps. getUserslogin().get(x1).getName());
     	        admin();
     		}
     		
 			else if(l.getisLogincustomer()==true) {
     			System.out.println("-----------------------------------==Cleaning Services Application ==---------------------------------------------------\n");
-                System.out.println("Welcome to customer: "+LoginSteps. userslogin.get(x1).getName());
+                System.out.println("Welcome to customer: "+LoginSteps. getUserslogin().get(x1).getName());
                 customer();
     		}
     		

@@ -150,11 +150,11 @@ public class ProdectSteps {
 				LOGGER.log(Level.INFO, "Category product:{0}  " , category );
 				LOGGER.log(Level.INFO, "ID:{0}  " , getid() );
 				LOGGER.log(Level.INFO, "Name product:{0}" , name);
-				LOGGER.log(Level.INFO, "Link for Picture product:{0} " , picture);
+				
 				LOGGER.log(Level.INFO, "The discription:{0} " , description);
 				LOGGER.log(Level.INFO, "The price: {0} " , price);
 				LOGGER.log(Level.INFO, "The Material: {0}" , material);
-				LOGGER.log(Level.INFO, "The type cleaning: {0}" , cleaninig);
+				
 				LOGGER.log(Level.INFO, "The Quantity:{0} " , quantity);
 				
 			
